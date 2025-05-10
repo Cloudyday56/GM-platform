@@ -17,6 +17,7 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
-    {"name":"Sprite2","order":1,"path":"sprites/Sprite2/Sprite2.yy",},
+    {"name":"sGround","order":2,"path":"sprites/sGround/sGround.yy",},
+    {"name":"sHeart","order":1,"path":"sprites/sHeart/sHeart.yy",},
   ],
 }
