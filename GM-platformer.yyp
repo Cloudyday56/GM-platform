@@ -35,7 +35,9 @@
   },
   "name":"GM-platformer",
   "resources":[
+    {"id":{"name":"oFlag","path":"objects/oFlag/oFlag.yy",},},
     {"id":{"name":"oGround","path":"objects/oGround/oGround.yy",},},
+    {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"sBall","path":"sprites/sBall/sBall.yy",},},
     {"id":{"name":"sGround","path":"sprites/sGround/sGround.yy",},},
