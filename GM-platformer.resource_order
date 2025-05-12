@@ -19,6 +19,7 @@
   "ResourceOrderSettings":[
     {"name":"oFlag","order":2,"path":"objects/oFlag/oFlag.yy",},
     {"name":"oPlayer","order":1,"path":"objects/oPlayer/oPlayer.yy",},
+    {"name":"sFlag","order":3,"path":"sprites/sFlag/sFlag.yy",},
     {"name":"sGround","order":2,"path":"sprites/sGround/sGround.yy",},
     {"name":"sHeart","order":1,"path":"sprites/sHeart/sHeart.yy",},
   ],
