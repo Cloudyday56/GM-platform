@@ -18,6 +18,7 @@
   ],
   "ResourceOrderSettings":[
     {"name":"oDoor","order":2,"path":"objects/oDoor/oDoor.yy",},
+    {"name":"oMusic","order":4,"path":"objects/oMusic/oMusic.yy",},
     {"name":"oPlayer","order":1,"path":"objects/oPlayer/oPlayer.yy",},
     {"name":"oWall","order":3,"path":"objects/oWall/oWall.yy",},
     {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
