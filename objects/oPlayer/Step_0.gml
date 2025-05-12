@@ -16,7 +16,8 @@ if (keyboard_check(ord("W")) && current_jumps > 0)
 	current_jumps--;
 }
 
-if (place_meeting(x, y+yspeed, oGround) || place_meeting(x, y+yspeed, Object4))
+
+if (place_meeting(x, y+yspeed, oGround) || place_meeting(x, y+yspeed, oWall))
 {
   while (!place_meeting(x, y + sign(yspeed), oGround)) {
 		y += sign(yspeed);
@@ -32,7 +33,7 @@ if (place_meeting(x, y+yspeed, oGround) || place_meeting(x, y+yspeed, Object4))
 y += yspeed;
 
 move_and_collide(xspeed, yspeed, oGround)
-move_and_collide(xspeed, yspeed, Object4)
+move_and_collide(xspeed, yspeed, oWall)
 
 //spike and flag
 if place_meeting(x, y+1, oDoor)
