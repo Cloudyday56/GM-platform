@@ -17,14 +17,9 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"Object4","order":3,"path":"objects/Object4/Object4.yy",},
     {"name":"oDoor","order":2,"path":"objects/oDoor/oDoor.yy",},
     {"name":"oPlayer","order":1,"path":"objects/oPlayer/oPlayer.yy",},
-<<<<<<< Updated upstream
-    {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
-=======
-    {"name":"oWall","order":3,"path":"objects/oWall/oWall.yy",},
-    {"name":"lvl2","order":1,"path":"rooms/lvl2/lvl2.yy",},
->>>>>>> Stashed changes
     {"name":"sDoor","order":3,"path":"sprites/sDoor/sDoor.yy",},
     {"name":"sGround","order":2,"path":"sprites/sGround/sGround.yy",},
     {"name":"sHeart","order":1,"path":"sprites/sHeart/sHeart.yy",},
