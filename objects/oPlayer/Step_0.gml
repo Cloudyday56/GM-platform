@@ -16,7 +16,9 @@ if (keyboard_check(ord("W")))
 }
 
 
+
 if (place_meeting(x, y+1, oGround) || place_meeting(x, y+1, oWall))
+
 {
 	yspeed = 0;
 	if (keyboard_check(ord("W")))
