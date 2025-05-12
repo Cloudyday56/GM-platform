@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oFlag",
+  "%Name":"Object4",
   "eventList":[],
   "managed":true,
-  "name":"oFlag",
+  "name":"Object4",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sFlag",
-    "path":"sprites/sFlag/sFlag.yy",
+    "name":"sWall",
+    "path":"sprites/sWall/sWall.yy",
   },
   "spriteMaskId":null,
   "visible":true,
