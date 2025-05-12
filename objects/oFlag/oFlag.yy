@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sFlag",
+    "path":"sprites/sFlag/sFlag.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
