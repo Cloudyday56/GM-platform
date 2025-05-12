@@ -17,10 +17,6 @@ if (keyboard_check(ord("W")) && current_jumps > 0)
 }
 
 
-if (place_meeting(x, y+1, oWall))
-
-if (place_meeting(x, y+yspeed, oGround) || place_meeting(x, y+yspeed, oWall))
-
 {
   while (!place_meeting(x, y + sign(yspeed), oGround)) {
 		y += sign(yspeed);
