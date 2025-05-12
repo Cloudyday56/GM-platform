@@ -9,19 +9,27 @@ if (keyboard_check(ord("D"))) {
     xspeed = +1;
 }
 //jump
-if (place_meeting(x, y+1, oGround))
+
+if (keyboard_check(ord("W")) && current_jumps > 0)
 {
-    yspeed = 0;
-    if (keyboard_check(ord("W")))
-    {
-        yspeed = -3;
-    }
+    yspeed = -2;
+	current_jumps--;
 }
 
-if (place_meeting(x, y+1, Object4))
+if (place_meeting(x, y+yspeed, oGround) || place_meeting(x, y+yspeed, Object4))
 {
-    yspeed = 0;
+  while (!place_meeting(x, y + sign(yspeed), oGround)) {
+		y += sign(yspeed);
+	}
+	
+	if (yspeed > 0) {
+		current_jumps = max_jumps;
+	}
+	
+	yspeed = 0;
 }
+
+y += yspeed;
 
 move_and_collide(xspeed, yspeed, oGround)
 move_and_collide(xspeed, yspeed, Object4)
