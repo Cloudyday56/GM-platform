@@ -18,13 +18,13 @@ if (place_meeting(x, y+1, oGround))
     }
 }
 
-if (place_meeting(x, y+1, Object4))
+if (place_meeting(x, y+1, oWall))
 {
     yspeed = 0;
 }
 
 move_and_collide(xspeed, yspeed, oGround)
-move_and_collide(xspeed, yspeed, Object4)
+move_and_collide(xspeed, yspeed, oWall)
 
 //spike and flag
 if place_meeting(x, y+1, oDoor)

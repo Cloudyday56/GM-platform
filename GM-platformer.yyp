@@ -35,10 +35,10 @@
   },
   "name":"GM-platformer",
   "resources":[
-    {"id":{"name":"Object4","path":"objects/Object4/Object4.yy",},},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},},
     {"id":{"name":"oGround","path":"objects/oGround/oGround.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
+    {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"sBall","path":"sprites/sBall/sBall.yy",},},
     {"id":{"name":"sDoor","path":"sprites/sDoor/sDoor.yy",},},
