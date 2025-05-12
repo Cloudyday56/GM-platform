@@ -31,15 +31,21 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.13.0.190",
+    "IDEVersion":"2024.13.1.193",
   },
   "name":"GM-platformer",
   "resources":[
-    {"id":{"name":"Object4","path":"objects/Object4/Object4.yy",},},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},},
     {"id":{"name":"oGround","path":"objects/oGround/oGround.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
+<<<<<<< Updated upstream
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
+=======
+    {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
+    {"id":{"name":"lvl1","path":"rooms/lvl1/lvl1.yy",},},
+    {"id":{"name":"lvl2","path":"rooms/lvl2/lvl2.yy",},},
+>>>>>>> Stashed changes
     {"id":{"name":"sBall","path":"sprites/sBall/sBall.yy",},},
     {"id":{"name":"sDoor","path":"sprites/sDoor/sDoor.yy",},},
     {"id":{"name":"sGround","path":"sprites/sGround/sGround.yy",},},
@@ -49,7 +55,13 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+<<<<<<< Updated upstream
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
+=======
+    {"roomId":{"name":"lvl1","path":"rooms/lvl1/lvl1.yy",},},
+    {"roomId":{"name":"lvl2","path":"rooms/lvl2/lvl2.yy",},},
+>>>>>>> Stashed changes
   ],
   "templateType":"game",
   "TextureGroups":[
