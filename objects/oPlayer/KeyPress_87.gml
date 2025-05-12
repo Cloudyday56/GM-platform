@@ -1,3 +1,3 @@
-if (current_jumps < max_jumps) {
+while (current_jumps < max_jumps) {
 	current_jumps += 1;
 }
