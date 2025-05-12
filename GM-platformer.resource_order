@@ -17,10 +17,12 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
-    {"name":"oFlag","order":2,"path":"objects/oFlag/oFlag.yy",},
+    {"name":"Object4","order":3,"path":"objects/Object4/Object4.yy",},
+    {"name":"oDoor","order":2,"path":"objects/oDoor/oDoor.yy",},
     {"name":"oPlayer","order":1,"path":"objects/oPlayer/oPlayer.yy",},
-    {"name":"sFlag","order":3,"path":"sprites/sFlag/sFlag.yy",},
+    {"name":"sDoor","order":3,"path":"sprites/sDoor/sDoor.yy",},
     {"name":"sGround","order":2,"path":"sprites/sGround/sGround.yy",},
     {"name":"sHeart","order":1,"path":"sprites/sHeart/sHeart.yy",},
+    {"name":"sWall","order":4,"path":"sprites/sWall/sWall.yy",},
   ],
 }
