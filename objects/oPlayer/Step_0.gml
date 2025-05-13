@@ -23,6 +23,22 @@ if (place_meeting( x + xspeed, y, oGround ))
     xspeed = 0;
 }
 
+
+if (place_meeting( x + xspeed, y, oWall ))
+{
+    //Scoot up to wall precisely
+    var _pixelCheck = _subPixel * sign(xspeed);
+    while (!place_meeting( x + _pixelCheck, y, oWall ))
+    {
+        x += _pixelCheck;
+    }
+
+    //Set xspd to zero to "collide"
+    xspeed = 0;
+}
+
+
+
 //Move
 x += xspeed;
 
@@ -91,9 +107,33 @@ if (yspeed >= 0 && place_meeting(x, y+1, oGround))
 
 }
 
+if (place_meeting( x , y + yspeed, oWall ))
+{
+    //Scoot up to wall precisely
+    var _pixelCheck = _subPixel * sign(yspeed);
+    while (!place_meeting( x , y + _pixelCheck, oWall ))
+    {
+        y += _pixelCheck;
+    }
+
+    //Set xspd to zero to "collide"
+    yspeed = 0;
+}
+
+//check onGround
+if (yspeed >= 0 && place_meeting(x, y+1, oWall))
+{
+	onWall = true;
+
+}else {
+	onWall = false;
+
+}
+
 
 //Move
 y += yspeed;
+
 
 
 if place_meeting(x, y+yspeed, oDoor)
