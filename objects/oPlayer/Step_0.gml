@@ -8,7 +8,7 @@ moveDir = rightKey - leftKey;
 //Get xspd
 xspeed = moveDir * moveSpd;
 
-//X collision
+//X collision ground
 var _subPixel = .5;
 if (place_meeting( x + xspeed, y, oGround ))
 {
@@ -24,6 +24,7 @@ if (place_meeting( x + xspeed, y, oGround ))
 }
 
 
+//x collision wall
 if (place_meeting( x + xspeed, y, oWall ))
 {
     //Scoot up to wall precisely
@@ -47,7 +48,7 @@ x += xspeed;
 yspeed += grav;
 
 //reset
-if onGround 
+if onGround || onWall
 {
 	jumpCount = 0
 } 
@@ -82,7 +83,7 @@ if jumpHoldTime > 0
 //cap
 //if yspeed > termVel { yspeed = termVel};
 
-//Y collision
+//Y collision ground
 var _subPixel = .5;
 if (place_meeting( x , y + yspeed, oGround ))
 {
@@ -92,6 +93,10 @@ if (place_meeting( x , y + yspeed, oGround ))
     {
         y += _pixelCheck;
     }
+	
+	if yspeed < 0
+	{	jumpHoldTime = 0;
+	}
 
     //Set xspd to zero to "collide"
     yspeed = 0;
@@ -107,6 +112,7 @@ if (yspeed >= 0 && place_meeting(x, y+1, oGround))
 
 }
 
+//Y collision wall
 if (place_meeting( x , y + yspeed, oWall ))
 {
     //Scoot up to wall precisely
@@ -120,7 +126,7 @@ if (place_meeting( x , y + yspeed, oWall ))
     yspeed = 0;
 }
 
-//check onGround
+//check onWall
 if (yspeed >= 0 && place_meeting(x, y+1, oWall))
 {
 	onWall = true;
@@ -136,6 +142,7 @@ y += yspeed;
 
 
 
+//Next level
 if place_meeting(x, y+yspeed, oDoor)
 {
     room_goto_next()
