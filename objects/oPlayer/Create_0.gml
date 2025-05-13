@@ -16,4 +16,5 @@ jumpCount = 0;
 jumpHoldTime = 0;
 jumpHoldFrame = 20;
 onGround = true;
+onWall = true;
 
