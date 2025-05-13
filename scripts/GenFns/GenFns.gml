@@ -26,6 +26,9 @@ function getControls()
 	jump = keyboard_check(ord("W")) + keyboard_check(vk_up);
 	jump = clamp(jump, 0, 1);	
 	
+	runKey = keyboard_check(vk_space);
+	runKey = clamp(runKey, 0, 1);	
+	
 	
 	//jupmkey buffering
 	if jumpkeyPressed
