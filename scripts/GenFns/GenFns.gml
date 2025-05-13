@@ -19,11 +19,11 @@ function getControls()
 	leftKey = clamp(leftKey, 0, 1);
 
 
-	jumpkeyPressed = keyboard_check_pressed(ord("W") + + keyboard_check_pressed(vk_up));
+	jumpkeyPressed = keyboard_check_pressed(ord("W")) + keyboard_check_pressed(vk_up);
 	jumpkeyPressed = clamp(jumpkeyPressed, 0, 1);
 
 
-	jump = keyboard_check(ord("W") + + keyboard_check(vk_up));
+	jump = keyboard_check(ord("W")) + keyboard_check(vk_up);
 	jump = clamp(jump, 0, 1);	
 	
 	
