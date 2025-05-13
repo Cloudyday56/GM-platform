@@ -24,7 +24,6 @@
     {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
     {"name":"sDoor","order":3,"path":"sprites/sDoor/sDoor.yy",},
     {"name":"sGround","order":2,"path":"sprites/sGround/sGround.yy",},
-    {"name":"sHeart","order":1,"path":"sprites/sHeart/sHeart.yy",},
     {"name":"sWall","order":4,"path":"sprites/sWall/sWall.yy",},
   ],
 }

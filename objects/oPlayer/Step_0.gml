@@ -1,40 +1,102 @@
-yspeed += 0.1 //gravity?
-xspeed = 0
 
-if (keyboard_check(ord("A")))
+getControls();
+
+//X Movement
+//Direction
+moveDir = rightKey - leftKey;
+
+//Get xspd
+xspeed = moveDir * moveSpd;
+
+//X collision
+var _subPixel = .5;
+if (place_meeting( x + xspeed, y, oGround ))
 {
-    xspeed = -1;
+    //Scoot up to wall precisely
+    var _pixelCheck = _subPixel * sign(xspeed);
+    while (!place_meeting( x + _pixelCheck, y, oGround ))
+    {
+        x += _pixelCheck;
+    }
+
+    //Set xspd to zero to "collide"
+    xspeed = 0;
 }
-if (keyboard_check(ord("D"))) {
-    xspeed = +1;
-}
+
+//Move
+x += xspeed;
+
+//Y Movement
+
+yspeed += grav;
+
+//reset
+if onGround 
+{
+	jumpCount = 0
+} 
+else{
+	if jumpCount == 0 {jumpCount = 1};
+};
+
 //jump
-
-if (keyboard_check(ord("W")))
+if jumpBuffered && jumpCount<jumpMax
 {
-    yspeed = -2;
-}
-
-
-
-if (place_meeting(x, y+1, oGround) || place_meeting(x, y+1, oWall))
-
-{
-	yspeed = 0;
-	if (keyboard_check(ord("W")))
-	{
-		yspeed =-2;
-	}
-
+	jumpBuffered = false;
+	jumpBufferTimer = 0;
+	
+	jumpCount ++;
+	
+    jumpHoldTime = jumpHoldFrame;
 	
 }
+if !jump 
+{
+	jumpHoldTime = 0;
+}
+
+if jumpHoldTime > 0
+{
+	yspeed = jumpSpd;
+	jumpHoldTime --;
+}
 
 
-move_and_collide(xspeed, yspeed, oGround)
-move_and_collide(xspeed, yspeed, oWall)
 
-//spike and flag
-if place_meeting(x, y+1, oDoor)
+//cap
+//if yspeed > termVel { yspeed = termVel};
+
+//Y collision
+var _subPixel = .5;
+if (place_meeting( x , y + yspeed, oGround ))
+{
+    //Scoot up to wall precisely
+    var _pixelCheck = _subPixel * sign(yspeed);
+    while (!place_meeting( x , y + _pixelCheck, oGround ))
+    {
+        y += _pixelCheck;
+    }
+
+    //Set xspd to zero to "collide"
+    yspeed = 0;
+}
+
+//check onGround
+if (yspeed >= 0 && place_meeting(x, y+1, oGround))
+{
+	onGround = true;
+
+}else {
+	onGround = false;
+
+}
+
+
+//Move
+y += yspeed;
+
+
+if place_meeting(x, y+yspeed, oDoor)
 {
     room_goto_next()
 }
