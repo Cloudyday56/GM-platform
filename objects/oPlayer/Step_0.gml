@@ -170,7 +170,7 @@ getControls();
 	        y += _pixelCheck;
 	    }
 		
-		//if the player bumps into a "ceiling", it falls
+		//if the player bumps into a "ceiling", it falls (Bonks)
 		if yspeed < 0
 		{	jumpHoldTime = 0;
 		}
@@ -192,7 +192,75 @@ getControls();
 		setOnGround(true);
 
 	}
-
+	
+	
+	//Check for solid and semisolid platforms beneath player
+	var clampYspeed = max(0, yspeed);
+	var wallList = ds_list_create();
+	var wallArray = array_create(0);
+	array_push(wallArray, oGround, oSemiSolidWall);
+	
+	
+	//create actual list of walls
+	var lstSize = instance_place_list(x, y+1+clampYspeed, wallArray, wallList, false);
+	
+	//loop through
+	for (var i = 0; i < lstSize; i++)
+	{
+		var inst = wallList[| i];
+		
+		//return a solid wall or semi solid wall
+		if inst.object_index == oGround 
+		|| object_is_ancestor(inst.object_index, oGround)
+		|| floor(bbox_bottom) <= ceil(inst.bbox_top - inst.yspeed) //check at the start of the frame
+		{
+			//return higher wall
+			if !instance_exists(myFloorPlat) 
+			|| inst.bbox_top + inst.yspeed <= myFloorPlat.bbox_top + myFloorPlat.yspeed
+			|| inst.bbox_top + inst.yspeed <= bbox_bottom
+			{
+				myFloorPlat = inst;
+			}
+		}
+		
+	}
+	//destroy ds list
+	ds_list_destroy(wallList);
+	
+	//make sure platform actually below player
+	if instance_exists(myFloorPlat) && !place_meeting(x, y+yspeed, myFloorPlat)
+	{
+		myFloorPlat = noone;
+	}
+	
+	//Land on the platform
+	if instance_exists(myFloorPlat)
+	{
+		var subPixel = 0.5;
+		while !place_meeting(x, y+subPixel, myFloorPlat) && !place_meeting(x, y, oGround)
+		{
+			y+=subPixel;		
+		}
+		
+		//to not go below the top of semisolid
+		if myFloorPlat.object_index == oSemiSolidWall 
+		|| object_is_ancestor(myFloorPlat.object_index, oSemiSolidWall)
+		{
+			while place_meeting(x, y, myFloorPlat) 
+			{
+				y -= subPixel;
+			}
+		
+		}
+		
+		y = floor(y);
+		
+		//collision
+		yspeed = 0;
+		setOnGround(true);
+		
+	}
+	
 
 	//Move
 	y += yspeed;
