@@ -5,40 +5,41 @@ getControls();
 //X Movement
 	//Direction
 	moveDir = rightKey - leftKey;
-	//Get face
+	//Get face (facing which side)
 	if moveDir != 0
 	{
 		face = moveDir;
 	}
 
 	//Get xspd
-	moveType = runKey
-	if !onGround 
+	moveType = runKey //whether or not run key is pressed
+	if !onGround //cannot run in the air
 	{
 		moveType = 0;
 	}
-	xspeed = moveDir * moveSpd[moveType];
+	xspeed = moveDir * moveSpd[moveType]; //walk or run depending on move type
 
-	//X collision ground
+	//X collision GROUND
 	var _subPixel = .5;
 	if (place_meeting( x + xspeed, y, oGround ))
 	{
-	    //Scoot up to wall precisely
+	    //this chunk is not that necessary, it's for the player to touch exactly the wall/ground
 	    var _pixelCheck = _subPixel * sign(xspeed);
 	    while (!place_meeting( x + _pixelCheck, y, oGround ))
 	    {
 	        x += _pixelCheck;
 	    }
+		
 
-	    //Set xspd to zero to "collide"
+	    //Set xspeed to zero to "collide"
 	    xspeed = 0;
 	}
 
 
-	//x collision wall
+	//x collision WALL
 	if (place_meeting( x + xspeed, y, oWall ))
 	{
-	    //Scoot up to wall precisely
+	    //this chunk is not that necessary, it's for the player to touch exactly the wall/ground
 	    var _pixelCheck = _subPixel * sign(xspeed);
 	    while (!place_meeting( x + _pixelCheck, y, oWall ))
 	    {
@@ -55,74 +56,75 @@ getControls();
 //Y Movement
 
 	
-	if coyoteHangTimer > 0
+	if coyoteHangTimer > 0 //it's above 0 when it's onGround (look at function setOnGround in Create)
 	{ 
 		coyoteHangTimer --;
 	}
 	else
 	{
-		yspeed += grav;
-		setOnGround(false);
+		yspeed += grav; //Apply gravity after coyote time
+		setOnGround(false); //in the air
 	}
 
 
-
-	//reset
+	//reset if on ground or wall
 	if onGround
 	{ 
-		jumpCount = 0
-		coyoteJumpTimer = coyoteJumpFrame;
+		jumpCount = 0 //reset jump count
+		coyoteJumpTimer = coyoteJumpFrame; //(JUMP) reset coyote jump time
 		
 	} 
-	else{
-		coyoteJumpTimer --;
-		if jumpCount == 0 && coyoteJumpTimer <=0
+	else{//if falls
+		coyoteJumpTimer --; 
+		if jumpCount == 0 && coyoteJumpTimer <=0 //(JUMP) if in the air, did not jump, 
+												 //and passed the coyote time, 
+												 //cannot jump anymore
 		{
 			jumpCount = 2
 		};
-		coyoteHangTimer = 0;
+		coyoteHangTimer = 0; //(HANG) no more coyote hang time, i'm not sure if we need this line
 	};
 
-	//jump
-	if jumpBuffered && jumpCount<jumpMax
+	//jump (jump buffer details in GenFns
+	if jumpBuffered && jumpCount<jumpMax //if jumps 
 	{
 		
-		jumpBuffered = false;
-		jumpBufferTimer = 0;
+		jumpBuffered = false; //reset boolean
+		jumpBufferTimer = 0; //not sure why, but necessary
 	
-		jumpCount ++;
+		jumpCount ++; //increase jump count
 	
-	    jumpHoldTime = jumpHoldFrame;
+	    jumpHoldTime = jumpHoldFrame; //can be held (look at next ifs)
+		
 		setOnGround(false); //no longer on ground
 	
 	}
-	if !jump 
+	if !jump //if the W key is not held (just pressed
 	{
-		jumpHoldTime = 0;
+		jumpHoldTime = 0; //don't hold
 	}
 
-	if jumpHoldTime > 0
+	if jumpHoldTime > 0 //if hold
 	{
-		yspeed = jumpSpd;
-		jumpHoldTime --;
+		yspeed = jumpSpd; 
+		jumpHoldTime --; //counts down for some frames (period for which the jump can be held)
 	}
-
-
 
 	//cap
-	//if yspeed > termVel { yspeed = termVel};
+	//if yspeed > termVel { yspeed = termVel}; //not necessary
 
 	//Y collision ground
 	var _subPixel = .5;
 	if (place_meeting( x , y + yspeed, oGround ))
 	{
-	    //Scoot up to wall precisely
+	    //this chunk is not that necessary, it's for the player to touch exactly the wall/ground
 	    var _pixelCheck = _subPixel * sign(yspeed);
 	    while (!place_meeting( x , y + _pixelCheck, oGround ))
 	    {
 	        y += _pixelCheck;
 	    }
-	
+
+		//if the player bumps into a "ceiling", it falls
 		if yspeed < 0
 		{	jumpHoldTime = 0;
 		}
@@ -135,12 +137,17 @@ getControls();
 	//Y collision wall
 	if (place_meeting( x , y + yspeed, oWall ))
 	{
-	    //Scoot up to wall precisely
+	    //this chunk is not that necessary, it's for the player to touch exactly the wall/ground
 	    var _pixelCheck = _subPixel * sign(yspeed);
 	    while (!place_meeting( x , y + _pixelCheck, oWall ))
 	    {
 	        y += _pixelCheck;
 	    }
+		
+		//if the player bumps into a "ceiling", it falls
+		if yspeed < 0
+		{	jumpHoldTime = 0;
+		}
 
 	    //Set xspd to zero to "collide"
 	    yspeed = 0;
@@ -153,7 +160,7 @@ getControls();
 
 	}
 
-	//check onWall
+	//check "onWall"
 	if (yspeed >= 0 && place_meeting(x, y+1, oWall))
 	{
 		setOnGround(true);
