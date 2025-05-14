@@ -41,10 +41,10 @@ getControls();
 			}else
 			{
 				var _pixelCheck = _subPixel * sign(xspeed);
-		    while (!place_meeting( x + _pixelCheck, y, oGround ))
-		    {
-		        x += _pixelCheck;
-		    }
+			    while (!place_meeting( x + _pixelCheck, y, oGround ))
+			    {
+			        x += _pixelCheck;
+			    }
 			}
 
 		    //Set xspeed to zero to "collide"
@@ -270,6 +270,72 @@ getControls();
 
 	//Move
 	y += yspeed;
+	
+//Moving plats collisions
+	//X - 
+	movePlatXspeed = 0;
+	if instance_exists(myFloorPlat)
+	{
+		movePlatXspeed = myFloorPlat.xspeed;	
+	}
+	
+	if place_meeting(x+movePlatXspeed, y, oGround)
+	{
+		var subPix = 0.5
+		var _pixelCheck = subPix * sign(movePlatXspeed);
+		while !place_meeting( x + _pixelCheck, y, oGround )
+		{
+			x += _pixelCheck;
+		}
+		
+		//collision
+		movePlatXspeed = 0;
+	}
+	
+	
+	//Move Along the platform	
+	x += movePlatXspeed;
+	
+	
+	//Y -  snap to platform
+	if (instance_exists(myFloorPlat) && myFloorPlat.yspeed != 0) //checking platform MoveSpd
+	{
+		//snap to platform
+		if !place_meeting(x, myFloorPlat.bbox_top, oGround)
+		&& myFloorPlat.bbox_top >= bbox_bottom - maxDroppingSpeed //che cks for undesired behaviors
+		{
+			y = myFloorPlat.bbox_top;
+		}
+		
+		if myFloorPlat.yspeed < 0 && place_meeting(x, y+myFloorPlat.yspeed, oGround)
+		{
+			//get pushed down to semisolid
+			if myFloorPlat.object_index == oSemiSolidWall 
+			|| object_is_ancestor(myFloorPlat.object_index, oSemiSolidWall)
+			{
+				//into semisolid (so that player falls)
+				var subPixel = 0.25;
+				while place_meeting(x, y+myFloorPlat.yspeed, oGround)
+				{
+					y += subPixel;
+				}
+				//push back out if underneath there is a solid platform
+				while place_meeting(x, y, oGround)
+				{
+					y -= subPixel;
+				}
+				y = round(y);
+			}
+		}
+	
+	}
+
+
+//WALL
+
+
+
+
 
 
 //sprite control
@@ -290,8 +356,11 @@ getControls();
 		//set collision mask
 		mask_index = spr_idle;
 
-
-
+//reset game
+if resetKey
+{
+	room_restart();
+}
 
 //Next level
 if place_meeting(x, y+yspeed, oDoor)

@@ -14,6 +14,37 @@ function setOnGround(val = true)
 	}
 }
 
+function check_for_semisolidplats(xPos, yPos)
+{
+	
+	var rtrn = noone;
+	
+	if yspeed >= 0 && place_meeting(xPos, yPos, oSemiSolidWall)
+	{
+		var semiwallList = ds_list_create();
+		var lstSize = instance_place_list(x, y+1, oSemiSolidWall, semiwallList, false);
+	
+		//loop through
+		for (var i = 0; i < lstSize; i++)
+		{
+			var inst = semiwallList[| i];
+		
+			//avoid sticking to platform, apparently
+			if floor(bbox_bottom) <= ceil(inst.bbox_top - inst.yspeed)
+			{
+				rtrn = inst; //found it
+				i = lstSize; //exit
+				
+			}
+		}	 
+		ds_list_destroy(semiwallList);
+	}
+	
+	return rtrn;
+	
+}
+
+
 window_set_size(1280, 720) //game window
 surface_resize(application_surface, 1280, 720);
 
@@ -66,7 +97,8 @@ spr_jump = sPlayer_jump;
 
 
 myFloorPlat = noone;
-movePlatYspeed = 0;
+movePlatXspeed = 0;
+
 
 maxDroppingSpeed = 8; //to stick to platform
 

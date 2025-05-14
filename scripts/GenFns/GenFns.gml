@@ -33,6 +33,9 @@ function getControls()
 	//to run
 	runKey = keyboard_check(vk_space);
 	runKey = clamp(runKey, 0, 1);	//set boundary
+
+	//reset
+	resetKey = keyboard_check_pressed(ord("R"));
 	
 	
 	//jupmkey buffering
