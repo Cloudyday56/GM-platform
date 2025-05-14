@@ -9,10 +9,14 @@ function setOnGround(val = true)
 	}else
 	{
 		onGround = false;
+		myFloorPlat = noone;
+		coyoteHangTimer = 0;
 	}
 }
 
 window_set_size(1280, 720) //game window
+surface_resize(application_surface, 1280, 720);
+
 controlsSetup(); //import the code from the script
 
 
@@ -63,6 +67,8 @@ spr_jump = sPlayer_jump;
 
 myFloorPlat = noone;
 movePlatYspeed = 0;
+
+maxDroppingSpeed = 8; //to stick to platform
 
 
 

@@ -202,33 +202,39 @@ getControls();
 	
 	
 	//create actual list of walls
-	var lstSize = instance_place_list(x, y+1+clampYspeed, wallArray, wallList, false);
+	var lstSize = instance_place_list(x, y+1+clampYspeed+maxDroppingSpeed, wallArray, wallList, false);
 	
 	//loop through
 	for (var i = 0; i < lstSize; i++)
 	{
 		var inst = wallList[| i];
 		
-		//return a solid wall or semi solid wall
-		if inst.object_index == oGround 
-		|| object_is_ancestor(inst.object_index, oGround)
-		|| floor(bbox_bottom) <= ceil(inst.bbox_top - inst.yspeed) //check at the start of the frame
+		//avoid sticking to platform, apparently
+		if (inst.yspeed <= yspeed || instance_exists(myFloorPlat))
+		&& (inst.yspeed > 0 || place_meeting(x, y+1+clampYspeed, inst))
 		{
-			//return higher wall
-			if !instance_exists(myFloorPlat) 
-			|| inst.bbox_top + inst.yspeed <= myFloorPlat.bbox_top + myFloorPlat.yspeed
-			|| inst.bbox_top + inst.yspeed <= bbox_bottom
+			//return a solid wall or semi solid wall
+			if inst.object_index == oGround 
+			|| object_is_ancestor(inst.object_index, oGround)
+			|| floor(bbox_bottom) <= ceil(inst.bbox_top - inst.yspeed) //check at the start of the frame
 			{
-				myFloorPlat = inst;
+				//return higher wall
+				if !instance_exists(myFloorPlat) 
+				|| inst.bbox_top + inst.yspeed <= myFloorPlat.bbox_top + myFloorPlat.yspeed
+				|| inst.bbox_top + inst.yspeed <= bbox_bottom
+				{
+					myFloorPlat = inst;
+				}
 			}
 		}
 		
+		 
 	}
 	//destroy ds list
 	ds_list_destroy(wallList);
 	
 	//make sure platform actually below player
-	if instance_exists(myFloorPlat) && !place_meeting(x, y+yspeed, myFloorPlat)
+	if instance_exists(myFloorPlat) && !place_meeting(x, y+maxDroppingSpeed, myFloorPlat)
 	{
 		myFloorPlat = noone;
 	}

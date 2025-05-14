@@ -8,6 +8,7 @@ function controlsSetup()
 	jumpBufferTimer = 0; //grace period for detecting jump input 
 						//(jumping registers a little bit before landing)
 	
+
 }
 
 
