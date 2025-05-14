@@ -1,7 +1,5 @@
 getControls();
 
-
-
 //X Movement
 	//Direction
 	moveDir = rightKey - leftKey;
@@ -21,20 +19,48 @@ getControls();
 
 	//X collision GROUND
 	var _subPixel = .5;
-	if (place_meeting( x + xspeed, y, oGround ))
+	if (place_meeting( x + xspeed, y, oGround )) //obstacle!
 	{
-	    //this chunk is not that necessary, it's for the player to touch exactly the wall/ground
-	    var _pixelCheck = _subPixel * sign(xspeed);
-	    while (!place_meeting( x + _pixelCheck, y, oGround ))
-	    {
-	        x += _pixelCheck;
-	    }
-		
+		//go up slope if there is one
+		if !place_meeting(x+xspeed, y-abs(xspeed)-1, oGround)
+		{
+			while (place_meeting( x + xspeed, y, oGround ))
+			{
+				y -= _subPixel;
+			}
+		}
+		else  //if no slope, check for ceiling, then regular collision
+		{
+			//ceiling (checking if any slope pushing downwards)
+			if !place_meeting(x+xspeed, y+abs(xspeed)+1, oGround)
+			{
+				while (place_meeting( x + xspeed, y, oGround ))
+				{
+					y += _subPixel;
+				}
+			}else
+			{
+				var _pixelCheck = _subPixel * sign(xspeed);
+		    while (!place_meeting( x + _pixelCheck, y, oGround ))
+		    {
+		        x += _pixelCheck;
+		    }
+			}
 
-	    //Set xspeed to zero to "collide"
-	    xspeed = 0;
+		    //Set xspeed to zero to "collide"
+		    xspeed = 0;
+		}
 	}
 
+	//going down slope
+	if (yspeed >= 0 && !place_meeting( x + xspeed, y+1, oGround )
+	&& (place_meeting( x + xspeed , y + abs(xspeed) +1, oGround )))
+	{
+		while (!place_meeting( x + xspeed, y+_subPixel, oGround ))
+			{
+				y += _subPixel;
+			}
+	}
 
 	//x collision WALL
 	if (place_meeting( x + xspeed, y, oWall ))
