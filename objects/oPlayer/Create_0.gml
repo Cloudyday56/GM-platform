@@ -16,21 +16,20 @@ function setOnGround(val = true)
 
 function check_for_semisolidplats(xPos, yPos)
 {
-	
-	var rtrn = noone;
+	var rtrn = noone; //platform to be returned
 	
 	if yspeed >= 0 && place_meeting(xPos, yPos, oSemiSolidWall)
 	{
-		var semiwallList = ds_list_create();
-		var lstSize = instance_place_list(x, y+1, oSemiSolidWall, semiwallList, false);
+		var semiwallList = ds_list_create(); 
+		var lstSize = instance_place_list(xPos, yPos, oSemiSolidWall, semiwallList, false);
 	
-		//loop through
+		//loop through every platforms
 		for (var i = 0; i < lstSize; i++)
 		{
 			var inst = semiwallList[| i];
 		
 			//avoid sticking to platform, apparently
-			if floor(bbox_bottom) <= ceil(inst.bbox_top - inst.yspeed)
+			if inst != forgetSemiSolid && floor(bbox_bottom) <= ceil(inst.bbox_top - inst.yspeed)
 			{
 				rtrn = inst; //found it
 				i = lstSize; //exit
@@ -56,6 +55,7 @@ spr_idle = sPlayer_idle;
 spr_walk = sPlayer_walk;
 spr_run = sPlayer_run;
 spr_jump = sPlayer_jump;
+spr_crouch = sPlayer_crouching;
 
 //Moving
 	face = 1; //facing left or right 
@@ -74,7 +74,7 @@ spr_jump = sPlayer_jump;
 	grav = .25; //gravity
 	//termVel = 4; //speed upper bound, not necessary
 
-	jumpSpd = -4; //jump speed (modify yspeed)
+	jumpSpd = -3; //jump speed (modify yspeed)
 
 	jumpMax = 2; //double jump
 	jumpCount = 0; //jump count
@@ -96,7 +96,10 @@ spr_jump = sPlayer_jump;
 	coyoteJumpTimer = 0;
 
 
+//moving platforms
 myFloorPlat = noone;
+downSemiSolid = noone; //for checking semi solid underneath
+forgetSemiSolid = noone; //to voluntarily go under the semisolid
 movePlatXspeed = 0;
 
 

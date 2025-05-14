@@ -20,6 +20,10 @@ function getControls()
 	
 	leftKey  = keyboard_check( ord("A") ) + keyboard_check(vk_left);
 	leftKey = clamp(leftKey, 0, 1); //set boundary
+	
+	//crouch
+	downKey  = keyboard_check( ord("S") ) + keyboard_check(vk_down);
+	downKey = clamp(downKey, 0, 1); //set boundary
 
 
 	//press to jump 
