@@ -48,6 +48,19 @@ getControls();
 
 	    //Set xspd to zero to "collide"
 	    xspeed = 0;
+		
+		//walljump
+		if (jumpkeyPressed) {
+			jumpCount = jumpMax;
+			
+			//jump
+			if (jumpCount > 0) {
+			yspeed = jumpSpd
+			jumpCount = -1
+			}
+			
+			xspeed = horiJumpSpd * (face * -1);
+		}
 	}
 
 	//Move

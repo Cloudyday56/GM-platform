@@ -40,6 +40,7 @@ grav = .25; //gravity
 //termVel = 4; //speed upper bound, not necessary
 
 jumpSpd = -4; //jump speed (modify yspeed)
+horiJumpSpd = 12 * 2.5; //jump speed in x (for walljumps)
 
 jumpMax = 2; //double jump
 jumpCount = 0; //jump count
