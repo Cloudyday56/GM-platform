@@ -8,6 +8,7 @@ function controlsSetup()
 	jumpBufferTimer = 0; //grace period for detecting jump input 
 						//(jumping registers a little bit before landing)
 	
+
 }
 
 
@@ -19,6 +20,11 @@ function getControls()
 	
 	leftKey  = keyboard_check( ord("A") ) + keyboard_check(vk_left);
 	leftKey = clamp(leftKey, 0, 1); //set boundary
+  
+	//crouch
+	downKey  = keyboard_check( ord("S") ) + keyboard_check(vk_down);
+	downKey = clamp(downKey, 0, 1); //set boundary
+
 
 
 	//press to jump 
@@ -32,6 +38,10 @@ function getControls()
 	//to run
 	runKey = keyboard_check(vk_space);
 	runKey = clamp(runKey, 0, 1);	//set boundary
+
+	//reset
+	resetKey = keyboard_check_pressed(ord("R"));
+
 	
 	
 	//jupmkey buffering
@@ -45,7 +55,9 @@ function getControls()
 		jumpBuffered = true; 
 		jumpBufferTimer --; //jumpkey can be registered 5 frames before landing, 
 							//so that the player will jump as soon he lands
-							//(I think that's what's happening)
+
+							//(I think that's what's happening) 
+
 	}else
 	{
 		jumpBuffered = false;
