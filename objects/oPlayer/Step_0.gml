@@ -631,12 +631,14 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 	}
 	
 //crushed
+/*
 image_blend = c_white;
 
 if place_meeting(x, y, oGround)
 {
 	image_blend = c_red;
 }
+*/
 
 
 
@@ -679,6 +681,13 @@ if place_meeting(x, y, oGround)
 
 //reset game
 if resetKey
+{
+	room_restart();
+}
+
+//death condition
+if place_meeting(x+xspeed, y, oSpike)
+|| place_meeting(x, y+yspeed, oSpike)
 {
 	room_restart();
 }
