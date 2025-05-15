@@ -84,9 +84,12 @@ spr_crouch = sPlayer_crouching;
 	jumpCount = 0; //jump count
 
 	jumpHoldTime = 0; 
-	jumpHoldFrame = 20;
+	jumpHoldFrame = 15;
 
 	onGround = true; //whether player is on the ground or in the air
+	
+	//wall jump
+	horiJumpSpd = 3.5;
 
 
 
@@ -102,6 +105,7 @@ spr_crouch = sPlayer_crouching;
 
 //moving platforms
 myFloorPlat = noone;
+earlyMovePlatSpd = false;
 downSemiSolid = noone; //for checking semi solid underneath
 forgetSemiSolid = noone; //to voluntarily go under the semisolid
 movePlatXspeed = 0;
