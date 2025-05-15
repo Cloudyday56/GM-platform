@@ -48,6 +48,7 @@ getControls();
 	var _subPixel = .5;
 	if (place_meeting( x + xspeed, y, oGround )) //obstacle!
 	{
+
 		//go up slope if there is one
 		if !place_meeting(x+xspeed, y-abs(xspeed)-1, oGround)
 		{
@@ -77,6 +78,7 @@ getControls();
 		    //Set xspeed to zero to "collide"
 		    xspeed = 0;
 		}
+
 	}
 
 	//going down slope
@@ -98,6 +100,7 @@ getControls();
 	}
 
 //--------------------------------
+
 	//x collision WALL
 	if (place_meeting( x + xspeed, y, oWall ))
 	{
@@ -110,6 +113,19 @@ getControls();
 
 	    //Set xspd to zero to "collide"
 	    xspeed = 0;
+		
+		//walljump
+		if (jumpkeyPressed) {
+			jumpCount = jumpMax;
+			
+			//jump
+			if (jumpCount > 0) {
+			yspeed = jumpSpd
+			jumpCount = -1
+			}
+			
+			xspeed = horiJumpSpd * (face * -1);
+		}
 	}
 //--------------------------------
 
@@ -149,6 +165,7 @@ getControls();
 	};
 
 	//jump (jump buffer details in GenFns
+
 	var solidFloor = false;
 	if instance_exists(myFloorPlat)
 	&& (myFloorPlat.object_index == oGround || object_is_ancestor(myFloorPlat.object_index, oGround))
@@ -214,7 +231,9 @@ getControls();
 	        y += _pixelCheck;
 	    }
 		
+    
 		//if the player bumps into a "ceiling", it falls (Bonks)
+
 		if yspeed < 0
 		{	jumpHoldTime = 0;
 		}
@@ -229,8 +248,10 @@ getControls();
 		setOnGround(true);
 
 	}
+
 	
 //--------------------------------
+
 	//check "onWall"
 	if (yspeed >= 0 && place_meeting(x, y+1, oWall))
 	{

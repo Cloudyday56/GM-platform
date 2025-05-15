@@ -61,6 +61,7 @@ crouching = false;
 spr_crouch = sPlayer_crouching;
 
 //Moving
+
 	face = 1; //facing left or right 
 	moveDir = 0; //going left or right
 
@@ -88,8 +89,8 @@ spr_crouch = sPlayer_crouching;
 	onGround = true; //whether player is on the ground or in the air
 
 
-	//coyote time
 
+	//coyote time
 	//grace period for falling off
 	coyoteHangFrame = 2;
 	coyoteHangTimer = 0;
@@ -106,8 +107,8 @@ forgetSemiSolid = noone; //to voluntarily go under the semisolid
 movePlatXspeed = 0;
 
 
-maxDroppingSpeed = 8; //to stick to platform
 
+maxDroppingSpeed = 8; //to stick to platform
 
 
 
