@@ -59,6 +59,7 @@ spr_jump = sPlayer_jump;
 //state
 crouching = false;
 spr_crouch = sPlayer_crouching;
+crouchSpd = 1;
 
 //Moving
 
@@ -90,7 +91,6 @@ spr_crouch = sPlayer_crouching;
 	
 	//wall jump
 	horiJumpSpd = 3.5;
-
 
 
 	//coyote time
