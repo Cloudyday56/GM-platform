@@ -55,6 +55,9 @@ spr_idle = sPlayer_idle;
 spr_walk = sPlayer_walk;
 spr_run = sPlayer_run;
 spr_jump = sPlayer_jump;
+
+//state
+crouching = false;
 spr_crouch = sPlayer_crouching;
 
 //Moving

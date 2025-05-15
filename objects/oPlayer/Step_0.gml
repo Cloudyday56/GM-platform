@@ -1,5 +1,32 @@
 getControls();
 
+
+//crouching
+	//into crouch
+	//manual
+	if downKey && instance_exists(myFloorPlat)
+	{
+		crouching = true;
+	}
+	if crouching
+	{
+		mask_index = spr_crouch;
+	}
+	
+	//out of crouch
+	if !downKey
+	{
+		mask_index = spr_idle;
+		if !place_meeting(x, y, oGround)
+		{
+			crouching = false;
+		}else
+		{
+			mask_index = spr_crouch;
+		}
+	}
+
+
 //X Movement
 	//Direction
 	moveDir = rightKey - leftKey;
@@ -421,7 +448,7 @@ getControls();
 	{
 		sprite_index = spr_jump;
 	}
-	if downKey
+	if crouching
 	{
 		sprite_index = spr_crouch;
 	}
