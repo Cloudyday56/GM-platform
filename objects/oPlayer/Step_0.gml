@@ -106,38 +106,64 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 
 //crouching
 	//into crouch
-	//manual
-	if downKey && instance_exists(myFloorPlat)
-	{
-		crouching = true;
-	}
-	if crouching
-	{
-		mask_index = spr_crouch;
-	}
-	
-	//out of crouch
-	if !downKey
-	{
-		mask_index = spr_idle;
-		if !place_meeting(x, y, oGround)
+		//manual
+		if downKey && instance_exists(myFloorPlat)
 		{
-			crouching = false;
-		}else
+			crouching = true;
+		}
+		
+		//forced (optional
+		/*
+		if onGround && place_meeting(x, y, oGround)
+		{
+			crouching = true;
+		}
+		*/
+		
+		if crouching
 		{
 			mask_index = spr_crouch;
 		}
-	}
+		
+	
+	//out of crouch
+		//manual
+		if !downKey
+		{
+			mask_index = spr_idle;
+			if !place_meeting(x, y, oGround)
+			{
+				crouching = false;
+			}else
+			{
+				mask_index = spr_crouch;
+			}
+		}
+		
+		//dont crouch in the air
+		if !onGround
+		{
+			mask_index = spr_idle;
+			if !place_meeting(x, y, oGround)
+			{
+				crouching = false;
+			}else
+			{
+				mask_index = spr_crouch;
+			}
+		}
 
 
 //X Movement
 	//Direction
 	moveDir = rightKey - leftKey;
+	
 	//Get face (facing which side)
 	if moveDir != 0
 	{
 		face = moveDir;
 	}
+	
 
 	//Get xspd
 	moveType = runKey //whether or not run key is pressed
@@ -146,6 +172,11 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 		moveType = 0;
 	}
 	xspeed = moveDir * moveSpd[moveType]; //walk or run depending on move type
+	//crouch speed
+	if crouching
+	{
+		xspeed = moveDir * crouchSpd;
+	}
 
 	//X collision GROUND
 	var _subPixel = .5;
@@ -263,7 +294,7 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 												 //and passed the coyote time, 
 												 //cannot jump anymore
 		{
-			jumpCount = 2
+			jumpCount = 1
 		};
 		coyoteHangTimer = 0; //(HANG) no more coyote hang time, i'm not sure if we need this line
 	};
@@ -490,8 +521,10 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 	
 
 	//Move
-	y += yspeed;
-	
+	if !place_meeting(x, y+yspeed, oGround)
+	{
+		y += yspeed;
+	}
 	
 	//reset forgetSemiSolid variable
 	if instance_exists(forgetSemiSolid) && !place_meeting(x, y, forgetSemiSolid) 
@@ -596,6 +629,16 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 		
 		
 	}
+	
+//crushed
+image_blend = c_white;
+
+if place_meeting(x, y, oGround)
+{
+	image_blend = c_red;
+}
+
+
 
 #endregion
 
