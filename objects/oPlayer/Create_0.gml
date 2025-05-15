@@ -91,6 +91,7 @@ crouchSpd = 1;
 	
 	//wall jump
 	horiJumpSpd = 3.5;
+	vertJumpSpd = 2;
 
 
 	//coyote time

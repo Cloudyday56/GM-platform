@@ -258,9 +258,9 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 			if (jumpCount < jumpMax) {
 			jumpCount ++;
 			}
-			
-			x += xspeed;
+			xspeed = horiJumpSpd * (face * -1);
 		}
+		x += xspeed;
 	}
 //--------------------------------
 
@@ -385,9 +385,9 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 				yspeed = jumpSpd;
 				jumpCount ++;
 			}
-			
-			y += yspeed;
+			yspeed = vertJumpSpd * (face * -1);
 		}
+		y += yspeed;
 	}
 //--------------------
 	
