@@ -90,6 +90,7 @@ getControls();
 		
 #endregion
 
+#region
 //(polishing) --> for the player to not fall if too close on the edge
 earlyMovePlatSpd = false;
 if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0 
@@ -152,8 +153,9 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 				mask_index = spr_crouch;
 			}
 		}
+#endregion
 
-
+#region
 //X Movement
 	//Direction
 	moveDir = rightKey - leftKey;
@@ -208,7 +210,9 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 			        x += _pixelCheck;
 			    }
 			}
-
+			
+			
+	
 		    //Set xspeed to zero to "collide"
 		    xspeed = 0;
 		}
@@ -232,9 +236,7 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 		}
 		
 	}
-
-//--------------------------------
-
+	
 	//x collision WALL
 	if (place_meeting( x + xspeed, y, oWall ))
 	{
@@ -245,24 +247,24 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 	        x += _pixelCheck;
 	    }
 
-	    //Set xspd and yspd to 0 to "stick"
+	  
 	    xspeed = 0;
-
-		
+		yspeed = -grav;
 		
 		jumpCount = 0;
 		//walljump
 		if (jumpkeyPressed) {
-			xspeed = moveDir * moveSpd[moveType];
+			xspeed = moveDir * moveSpd[0];
 			//jump
 			if (jumpCount < jumpMax) {
 			jumpCount ++;
 			}
 			xspeed = horiJumpSpd * (face * -1);
 		}
-		x += xspeed;
 	}
+
 //--------------------------------
+
 
 	//Move
 	x += xspeed;
@@ -331,6 +333,7 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 		yspeed = jumpSpd; 
 		jumpHoldTime --; //counts down for some frames (period for which the jump can be held)
 	}
+	
 
 	//cap
 	//if yspeed > termVel { yspeed = termVel}; //not necessary
@@ -355,8 +358,7 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 	    //Set xspd to zero to "collide"
 	    yspeed = 0;
 	}
-
-//--------------------
+	
 	//Y collision wall
 	if (place_meeting( x , y + yspeed, oWall ))
 	{
@@ -374,10 +376,10 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 			jumpHoldTime = 0;
 		}
 
-	    //Set xspd to zero to "collide"
+	//    //Set xspd to zero to "collide"
 	    yspeed = 0;
 		
-		//walljump !!
+	//	//walljump !!
 		jumpCount = 0;
 		if (jumpkeyPressed) {
 			//jump
@@ -385,11 +387,13 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 				yspeed = jumpSpd;
 				jumpCount ++;
 			}
-			yspeed = vertJumpSpd * (face * -1);
+			yspeed = -vertJumpSpd;
 		}
 		y += yspeed;
 	}
+
 //--------------------
+	
 	
 	//check onGround
 	if (yspeed >= 0 && place_meeting(x, y+1, oGround))
@@ -401,14 +405,6 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 	
 //--------------------------------
 
-	//check "onWall"
-	if (yspeed >= 0 && place_meeting(x, y+1, oWall))
-	{
-		setOnGround(true);
-
-	}
-	
-//--------------------------------
 	
 	//Check for solid and semisolid platforms beneath player
 	var clampYspeed = max(0, yspeed);
@@ -532,7 +528,7 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 		forgetSemiSolid = noone;
 	}
 	
-	
+#endregion
 	
 //Moving plats collisions
 #region
@@ -644,15 +640,31 @@ if place_meeting(x, y, oGround)
 
 #endregion
 
-
 //--------------------------------
+#region
 //WALL
+	
+	
+	//check "onWall"
+	if (yspeed >= 0 && place_meeting(x, y+1, oWall))
+	{
+		setOnGround(true);
+
+	}
+	
+	//if (yspeed >= 0 && place_meeting(x + xspeed, y, oWall))
+	//{
+	//	setOnGround(false);
+
+	//}
+	
+	
 
 
-
+#endregion
 //--------------------------------
 
-
+#region
 //sprite control
 
 	//walking
@@ -698,6 +710,7 @@ if place_meeting(x, y+yspeed, oDoor)
     room_goto_next()
 }
 
+#endregion
 
 
 
