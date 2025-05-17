@@ -116,4 +116,10 @@ movePlatXspeed = 0;
 maxDroppingSpeed = 8; //to stick to platform
 
 
+//collectables
+global.keyCount = 0;
+
+//death condition
+dead = false;
+
 

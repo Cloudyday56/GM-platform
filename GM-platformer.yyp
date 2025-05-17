@@ -26,10 +26,12 @@
   },
   "name":"GM-platformer",
   "resources":[
+    {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},},
     {"id":{"name":"oGround","path":"objects/oGround/oGround.yy",},},
     {"id":{"name":"oGroundMove","path":"objects/oGroundMove/oGroundMove.yy",},},
     {"id":{"name":"oGroundMove2","path":"objects/oGroundMove2/oGroundMove2.yy",},},
+    {"id":{"name":"oKey","path":"objects/oKey/oKey.yy",},},
     {"id":{"name":"oMusic","path":"objects/oMusic/oMusic.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oSemiSolidMove","path":"objects/oSemiSolidMove/oSemiSolidMove.yy",},},
@@ -48,6 +50,8 @@
     {"id":{"name":"sGround","path":"sprites/sGround/sGround.yy",},},
     {"id":{"name":"sGroundMove","path":"sprites/sGroundMove/sGroundMove.yy",},},
     {"id":{"name":"sGroundMove2","path":"sprites/sGroundMove2/sGroundMove2.yy",},},
+    {"id":{"name":"sKey","path":"sprites/sKey/sKey.yy",},},
+    {"id":{"name":"sKeyOff","path":"sprites/sKeyOff/sKeyOff.yy",},},
     {"id":{"name":"sPlayer_crouching","path":"sprites/sPlayer_crouching/sPlayer_crouching.yy",},},
     {"id":{"name":"sPlayer_idle","path":"sprites/sPlayer_idle/sPlayer_idle.yy",},},
     {"id":{"name":"sPlayer_jump","path":"sprites/sPlayer_jump/sPlayer_jump.yy",},},
@@ -65,8 +69,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
+    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
