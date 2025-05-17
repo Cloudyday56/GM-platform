@@ -44,8 +44,6 @@ function check_for_semisolidplats(xPos, yPos)
 }
 
 
-window_set_size(1280, 720) //game window
-surface_resize(application_surface, 1280, 720);
 
 controlsSetup(); //import the code from the script
 
