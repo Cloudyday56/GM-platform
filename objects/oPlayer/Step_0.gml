@@ -1,5 +1,17 @@
 getControls();
 
+if dead 
+{
+    // Wait for key to restart
+	x = -1;
+	y = -1;
+	
+	if resetKey
+	{
+		room_restart();
+	}
+
+}
 //moving solid:
 #region
 //Get out of any moving solid
@@ -701,11 +713,11 @@ if resetKey
 if place_meeting(x+xspeed, y, oSpike)
 || place_meeting(x, y+yspeed, oSpike)
 {
-	room_restart();
+	dead = true;
 }
 
 //Next level
-if place_meeting(x, y+yspeed, oDoor)
+if place_meeting(x, y+yspeed, oDoor) && global.keyCount == 3
 {
     room_goto_next()
 }
