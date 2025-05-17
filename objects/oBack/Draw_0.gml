@@ -5,5 +5,4 @@ var cam_y = camera_get_view_y(cam);
 var cam_w = camera_get_view_width(cam);
 var cam_h = camera_get_view_height(cam);
 
-// Draw stretched background at the camera's position and size
 draw_sprite_stretched(sBackground, 0, cam_x, cam_y, cam_w, cam_h);
