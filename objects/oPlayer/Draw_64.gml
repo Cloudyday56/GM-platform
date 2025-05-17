@@ -3,7 +3,7 @@ var icon_spacing = 100; // space between icons
 var icon_size = 48; // size of sprite if needed
 var scale = 5;
 var start_x = display_get_gui_width() - (icon_spacing * 3) - 5; // left-aligned in top-right
-var yPosition = 100;
+var yPosition = 130;
 
 // Loop through 3 keys
 for (var i = 0; i < 3; i++)
@@ -14,3 +14,7 @@ for (var i = 0; i < 3; i++)
     // Draw the icon
 	draw_sprite_ext(spr, 0, start_x + i * icon_spacing, yPosition, scale, scale, 0, c_white, 1);
 }
+
+
+
+

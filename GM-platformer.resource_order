@@ -8,6 +8,7 @@
   ],
   "ResourceOrderSettings":[
     {"name":"Font1","order":6,"path":"fonts/Font1/Font1.yy",},
+    {"name":"oBack","order":15,"path":"objects/oBack/oBack.yy",},
     {"name":"oDoor","order":2,"path":"objects/oDoor/oDoor.yy",},
     {"name":"oGroundMove","order":11,"path":"objects/oGroundMove/oGroundMove.yy",},
     {"name":"oGroundMove2","order":13,"path":"objects/oGroundMove2/oGroundMove2.yy",},
@@ -22,7 +23,9 @@
     {"name":"oSlope3","order":8,"path":"objects/oSlope3/oSlope3.yy",},
     {"name":"oSpike","order":12,"path":"objects/oSpike/oSpike.yy",},
     {"name":"oWall","order":3,"path":"objects/oWall/oWall.yy",},
+    {"name":"Room1","order":2,"path":"rooms/Room1/Room1.yy",},
     {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
+    {"name":"sBackground","order":23,"path":"sprites/sBackground/sBackground.yy",},
     {"name":"sDoor","order":3,"path":"sprites/sDoor/sDoor.yy",},
     {"name":"sGround","order":2,"path":"sprites/sGround/sGround.yy",},
     {"name":"sGroundMove","order":18,"path":"sprites/sGroundMove/sGroundMove.yy",},
