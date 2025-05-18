@@ -1,20 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oHelp",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oControls",
+  "eventList":[],
   "managed":true,
-  "name":"oHelp",
+  "name":"oControls",
   "overriddenProperties":[],
   "parent":{
-    "name":"PauseButtons",
-    "path":"folders/Objects/PauseButtons.yy",
+    "name":"MenuButtons",
+    "path":"folders/Objects/MenuButtons.yy",
   },
-  "parentObjectId":{
-    "name":"oButton_ingame",
-    "path":"objects/oButton_ingame/oButton_ingame.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sReturn",
-    "path":"sprites/sReturn/sReturn.yy",
+    "name":"sControl",
+    "path":"sprites/sControl/sControl.yy",
   },
   "spriteMaskId":null,
   "visible":true,
