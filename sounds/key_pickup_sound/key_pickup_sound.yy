@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"jump_sound",
+  "%Name":"key_pickup_sound",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.0559864,
-  "name":"jump_sound",
+  "duration":14.907211,
+  "name":"key_pickup_sound",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"jump_sound.mp3",
+  "soundFile":"key_pickup_sound.mp3",
   "type":0,
-  "volume":0.6,
+  "volume":0.25,
 }
