@@ -1,4 +1,5 @@
 // Inherit the parent event
 event_inherited();
 
-//Settings
+audio_pause_all();
+room_goto(rMenu);

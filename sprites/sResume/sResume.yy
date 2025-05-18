@@ -19,7 +19,6 @@
   "height":46,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"256f7a24-0ca4-4d62-b99c-9fb216870d29","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"256f7a24-0ca4-4d62-b99c-9fb216870d29","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"af652637-0752-4e90-935a-7618eb35e6e8","blendMode":0,"displayName":"default","isLocked":false,"name":"af652637-0752-4e90-935a-7618eb35e6e8","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sResume",

@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"oHelp",
+  "%Name":"oReturn",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oHelp",
+  "name":"oReturn",
   "overriddenProperties":[],
   "parent":{
     "name":"PauseButtons",
