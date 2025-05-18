@@ -81,6 +81,7 @@ crouchSpd = 1;
 
 	jumpMax = 2; //double jump
 	jumpCount = 0; //jump count
+	soundJumpCount = 0
 
 	jumpHoldTime = 0; 
 	jumpHoldFrame = 15;
