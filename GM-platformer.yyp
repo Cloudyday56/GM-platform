@@ -33,6 +33,7 @@
   "resources":[
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
     {"id":{"name":"oBack","path":"objects/oBack/oBack.yy",},},
+    {"id":{"name":"oBackButton","path":"objects/oBackButton/oBackButton.yy",},},
     {"id":{"name":"oButton_ingame","path":"objects/oButton_ingame/oButton_ingame.yy",},},
     {"id":{"name":"oButtonParent","path":"objects/oButtonParent/oButtonParent.yy",},},
     {"id":{"name":"oButtonPlay","path":"objects/oButtonPlay/oButtonPlay.yy",},},
@@ -50,7 +51,6 @@
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oQuit","path":"objects/oQuit/oQuit.yy",},},
     {"id":{"name":"oResume","path":"objects/oResume/oResume.yy",},},
-    {"id":{"name":"oReturn","path":"objects/oReturn/oReturn.yy",},},
     {"id":{"name":"oSemiSolidMove","path":"objects/oSemiSolidMove/oSemiSolidMove.yy",},},
     {"id":{"name":"oSemiSolidWall","path":"objects/oSemiSolidWall/oSemiSolidWall.yy",},},
     {"id":{"name":"oSlope0","path":"objects/oSlope0/oSlope0.yy",},},
@@ -84,7 +84,6 @@
     {"id":{"name":"sPlayer_walk","path":"sprites/sPlayer_walk/sPlayer_walk.yy",},},
     {"id":{"name":"sQuit","path":"sprites/sQuit/sQuit.yy",},},
     {"id":{"name":"sResume","path":"sprites/sResume/sResume.yy",},},
-    {"id":{"name":"sReturn","path":"sprites/sReturn/sReturn.yy",},},
     {"id":{"name":"sSemiSolidMove","path":"sprites/sSemiSolidMove/sSemiSolidMove.yy",},},
     {"id":{"name":"sSemiSolidWall","path":"sprites/sSemiSolidWall/sSemiSolidWall.yy",},},
     {"id":{"name":"sSlope0","path":"sprites/sSlope0/sSlope0.yy",},},
