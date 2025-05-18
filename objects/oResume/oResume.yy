@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"oButton_ingame",
+  "%Name":"oResume",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oButton_ingame",
+  "name":"oResume",
   "overriddenProperties":[],
   "parent":{
     "name":"PauseButtons",
     "path":"folders/Objects/PauseButtons.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oButton_ingame",
+    "path":"objects/oButton_ingame/oButton_ingame.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sResume",
+    "path":"sprites/sResume/sResume.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
