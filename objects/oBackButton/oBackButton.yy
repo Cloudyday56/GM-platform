@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"oReturn",
+  "%Name":"oBackButton",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oReturn",
+  "name":"oBackButton",
   "overriddenProperties":[],
   "parent":{
     "name":"PauseButtons",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sReturn",
-    "path":"sprites/sReturn/sReturn.yy",
+    "name":"sBack",
+    "path":"sprites/sBack/sBack.yy",
   },
   "spriteMaskId":null,
   "visible":true,
