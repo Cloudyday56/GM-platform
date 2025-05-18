@@ -9,7 +9,7 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
 
-draw_set_color(make_color_rgb(255, 255, 255)); 
+draw_set_color(make_color_rgb(255, 225, 225)); 
 // Draw the button text at the center position (x, y)
 draw_text(x, y, button_text);
 
