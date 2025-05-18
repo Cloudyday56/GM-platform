@@ -8,7 +8,7 @@
                 {"$GMRInstance":"v2","%Name":"inst_209C33C9","colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_209C33C9","objectId":{"name":"oResume","path":"objects/oResume/oResume.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":1.5,"x":102.0,"y":34.5,},
               ],"flexDirection":0,"height":{"unit":3,"value":46.0,},"justifyContent":1,"name":"ResumePanel","nodeColour":4294096456,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":102.0,},},
             {"$GMRFlexPanel":"","%Name":"ReturnPanel","alignItems":2,"children":[
-                {"$GMRInstance":"v2","%Name":"inst_8A0A8AF","colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_8A0A8AF","objectId":{"name":"oReturn","path":"objects/oReturn/oReturn.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":1.5,"x":102.0,"y":34.5,},
+                {"$GMRInstance":"v2","%Name":"inst_8A0A8AF","colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_8A0A8AF","objectId":{"name":"oBackButton","path":"objects/oBackButton/oBackButton.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":1.5,"x":102.0,"y":34.5,},
               ],"flexDirection":0,"height":{"unit":3,"value":46.0,},"justifyContent":1,"name":"ReturnPanel","nodeColour":4282949106,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":102.0,},},
             {"$GMRFlexPanel":"","%Name":"QuitPanel","alignItems":2,"children":[
                 {"$GMRInstance":"v2","%Name":"inst_7972EA94","colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7972EA94","objectId":{"name":"oQuit","path":"objects/oQuit/oQuit.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":1.5,"x":102.0,"y":34.5,},
@@ -26,5 +26,5 @@
   "resourceType":"GMRoomUI",
   "resourceVersion":"2.0",
   "viewspaceChildren":[],
-  "visible":false,
+  "visible":true,
 }
