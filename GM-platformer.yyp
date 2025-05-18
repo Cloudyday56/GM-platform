@@ -27,7 +27,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.13.1.193",
+    "IDEVersion":"2024.13.0.190",
   },
   "name":"GM-platformer",
   "resources":[
@@ -65,7 +65,7 @@
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"GenFns","path":"scripts/GenFns/GenFns.yy",},},
     {"id":{"name":"GameMusic","path":"sounds/GameMusic/GameMusic.yy",},},
-    {"id":{"name":"sBack","path":"sprites/sBack/sBack.yy",},},
+    {"id":{"name":"jump_sound","path":"sounds/jump_sound/jump_sound.yy",},},
     {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},},
     {"id":{"name":"sBox_ingame","path":"sprites/sBox_ingame/sBox_ingame.yy",},},
     {"id":{"name":"sButton","path":"sprites/sButton/sButton.yy",},},

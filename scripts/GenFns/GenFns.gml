@@ -53,7 +53,7 @@ function getControls()
 	if jumpBufferTimer > 0
 	{
 		jumpBuffered = true; 
-		jumpBufferTimer --; //jumpkey can be registered 5 frames before landing, 
+		jumpBufferTimer --;//jumpkey can be registered 5 frames before landing, 
 							//so that the player will jump as soon he lands
 
 							//(I think that's what's happening) 
