@@ -264,7 +264,7 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 		yspeed = -grav;
 		
 		jumpCount = 0;
-		soundJumpCount = 0;
+		soundJumpCount = 1;
 		//walljump
 		if (jumpkeyPressed) {
 			xspeed = moveDir * moveSpd[0];
@@ -394,7 +394,7 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 		
 	//	//walljump !!
 		jumpCount = 0;
-		soundJumpCount = 0;
+		soundJumpCount = 1;
 		if (jumpkeyPressed) {
 			//jump
 			if (jumpCount < jumpMax) {
@@ -716,6 +716,7 @@ if place_meeting(x+xspeed, y, oSpike)
 || place_meeting(x, y+yspeed, oSpike)
 {
 	dead = true;
+	audio_play_sound(boom9, 0, false, 1, 0, 2.5);
 }
 
 //Next level
