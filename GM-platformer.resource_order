@@ -20,6 +20,7 @@
     {"name":"oButtonControls","order":7,"path":"objects/oButtonControls/oButtonControls.yy",},
     {"name":"oButtonPlay","order":1,"path":"objects/oButtonPlay/oButtonPlay.yy",},
     {"name":"oButtonQuit","order":2,"path":"objects/oButtonQuit/oButtonQuit.yy",},
+    {"name":"oButtonReset","order":9,"path":"objects/oButtonReset/oButtonReset.yy",},
     {"name":"oControls","order":5,"path":"objects/oControls/oControls.yy",},
     {"name":"oDoor","order":2,"path":"objects/oDoor/oDoor.yy",},
     {"name":"oDoubJump","order":4,"path":"objects/oDoubJump/oDoubJump.yy",},
