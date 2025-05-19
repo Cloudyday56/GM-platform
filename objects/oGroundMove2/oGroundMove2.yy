@@ -9,8 +9,8 @@
   "name":"oGroundMove2",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Terrain",
+    "path":"folders/Objects/Terrain.yy",
   },
   "parentObjectId":{
     "name":"oGroundMove",
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sGroundMove2",
-    "path":"sprites/sGroundMove2/sGroundMove2.yy",
+    "name":"sGroundMove",
+    "path":"sprites/sGroundMove/sGroundMove.yy",
   },
   "spriteMaskId":null,
   "visible":true,

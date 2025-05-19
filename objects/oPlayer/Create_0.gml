@@ -134,6 +134,13 @@ switch (room)
     case r2: global.currentLevel = 2; break;
     case r3: global.currentLevel = 3; break;
     case r4: global.currentLevel = 4; break;
+	case r5: global.currentLevel = 5; break;
+    case r6: global.currentLevel = 6; break;
+    case r7: global.currentLevel = 7; break;
+    case r8: global.currentLevel = 8; break;
+	case r9: global.currentLevel = 9; break;
+    case ra10: global.currentLevel = 10; break;
+
 }
 
 

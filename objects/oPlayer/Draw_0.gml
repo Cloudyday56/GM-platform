@@ -3,7 +3,7 @@ draw_sprite_ext(sprite_index, image_index, x, y, image_xscale*face,
 				image_yscale, image_angle, image_blend, image_alpha);
 if dead 
 {
-	// Optionally draw a semi-transparent black background to dim the game screen
+	//draw a semi-transparent black background to dim the game screen
     draw_set_alpha(0.5);
     draw_set_color(c_black);
     draw_rectangle(0, 0, room_width, room_height, false);

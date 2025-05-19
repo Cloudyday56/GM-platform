@@ -31,7 +31,7 @@
               ],"flexDirection":0,"height":{"unit":3,"value":46.0,},"justifyContent":1,"name":"QuitPanel","nodeColour":4286925042,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":102.0,},},
             {"$GMRSpriteGraphic":"v1","%Name":"graphic_2F5D3AF4","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_2F5D3AF4","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"sBox_ingame","path":"sprites/sBox_ingame/sBox_ingame.yy",},"x":175.5,"y":225.0,},
           ],"flexDirection":0,"gapRow":30.0,"height":{"unit":1,"value":450.0,},"justifyContent":1,"name":"PausePanel","nodeColour":4282945778,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":1,"value":350.0,},},
-      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"PauseLayer","nodeColour":4290966088,"resourceType":"GMRUILayer","resourceVersion":"2.0","visible":false,},
+      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"PauseLayer","nodeColour":4290966088,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
   ],
   "locked":false,
   "name":"RoomUI",
@@ -42,5 +42,5 @@
   "resourceType":"GMRoomUI",
   "resourceVersion":"2.0",
   "viewspaceChildren":[],
-  "visible":true,
+  "visible":false,
 }
