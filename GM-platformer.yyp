@@ -130,6 +130,7 @@
     {"id":{"name":"sResume","path":"sprites/sResume/sResume.yy",},},
     {"id":{"name":"sSemiSolidMove","path":"sprites/sSemiSolidMove/sSemiSolidMove.yy",},},
     {"id":{"name":"sSemiSolidWall","path":"sprites/sSemiSolidWall/sSemiSolidWall.yy",},},
+    {"id":{"name":"sSkull","path":"sprites/sSkull/sSkull.yy",},},
     {"id":{"name":"sSlope0","path":"sprites/sSlope0/sSlope0.yy",},},
     {"id":{"name":"sSlope1","path":"sprites/sSlope1/sSlope1.yy",},},
     {"id":{"name":"sSlope2","path":"sprites/sSlope2/sSlope2.yy",},},
