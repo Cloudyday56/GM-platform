@@ -8,8 +8,8 @@
   "name":"oGround",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Terrain",
+    "path":"folders/Objects/Terrain.yy",
   },
   "parentObjectId":null,
   "persistent":false,

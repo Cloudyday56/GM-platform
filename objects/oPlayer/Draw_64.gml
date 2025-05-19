@@ -6,15 +6,19 @@ var start_x = display_get_gui_width() - (icon_spacing * 3) - 5; // left-aligned 
 var yPosition = 130;
 
 // Loop through 3 keys
-for (var i = 0; i < 3; i++)
+if !(room == rWin)
 {
-    // Determine which sprite to draw
-    var spr = (i < global.keyCount) ? sKey : sKeyOff;
-    
-    // Draw the icon
-	draw_sprite_ext(spr, 0, start_x + i * icon_spacing, yPosition, scale, scale, 0, c_white, 1);
-}
 
+	for (var i = 0; i < 3; i++)
+	{
+	    // Determine which sprite to draw (On or Off)
+	    var spr = (i < global.keyCount) ? sKey : sKeyOff;
+    
+	    // Draw the icons
+		draw_sprite_ext(spr, 0, start_x + i * icon_spacing, yPosition, scale, scale, 0, c_white, 1);
+	}
+
+}
 
 
 
