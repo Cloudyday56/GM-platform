@@ -5,7 +5,13 @@ function setOnGround(val = true)
 	if val
 	{
 		onGround = true;
-		coyoteHangTimer = coyoteHangFrame; //(HANG) reset hang time
+		if abs(xspeed) > 2.5
+		{
+			coyoteHangTimer = coyoteHangFrame + 5; //(HANG) sort of momentum for running
+		}else
+		{
+			coyoteHangTimer = coyoteHangFrame; //(HANG) reset hang time
+		}
 	}else
 	{
 		onGround = false;
@@ -120,5 +126,15 @@ global.keyCount = 0;
 
 //death condition
 dead = false;
+
+
+switch (room)
+{
+    case r1: global.currentLevel = 1; break;
+    case r2: global.currentLevel = 2; break;
+    case r3: global.currentLevel = 3; break;
+    case r4: global.currentLevel = 4; break;
+}
+
 
 

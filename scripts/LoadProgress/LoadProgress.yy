@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"LoadProgress",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"LoadProgress",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
