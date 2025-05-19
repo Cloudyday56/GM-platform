@@ -128,3 +128,13 @@ global.keyCount = 0;
 dead = false;
 
 
+switch (room)
+{
+    case r1: global.currentLevel = 1; break;
+    case r2: global.currentLevel = 2; break;
+    case r3: global.currentLevel = 3; break;
+    case r4: global.currentLevel = 4; break;
+}
+
+
+

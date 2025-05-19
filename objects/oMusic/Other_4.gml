@@ -1,2 +1,5 @@
 //start music
-audio_play_sound(GameMusic, true, 1);
+if !audio_is_playing(GameMusic)
+{
+	audio_play_sound(GameMusic, true, 1);
+}
