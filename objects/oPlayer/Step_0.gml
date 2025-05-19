@@ -717,7 +717,7 @@ if place_meeting(x+xspeed, y, oSpike)
 || place_meeting(x, y+yspeed, oSpike)
 {
 	dead = true;
-	audio_play_sound(boom9, 0, false, 1, 0, 2.5);
+	audio_play_sound(death_sound, 0, false, 1, 0, 1.5);
 }
 
 //Next level
