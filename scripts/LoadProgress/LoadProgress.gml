@@ -10,7 +10,6 @@ function LoadProgress(){
         var data = json_parse(json); // This returns a struct
 
         if (is_struct(data)) {
-            // Use dot notation here
             global.unlockedLevel = data.level_unlocked;
         } else {
             // Fallback if parsing failed
