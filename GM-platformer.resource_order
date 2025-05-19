@@ -99,6 +99,7 @@
     {"name":"sPlayer_walk","order":4,"path":"sprites/sPlayer_walk/sPlayer_walk.yy",},
     {"name":"sQuit","order":2,"path":"sprites/sQuit/sQuit.yy",},
     {"name":"sSemiSolidWall","order":1,"path":"sprites/sSemiSolidWall/sSemiSolidWall.yy",},
+    {"name":"sSkull","order":39,"path":"sprites/sSkull/sSkull.yy",},
     {"name":"sSlope0","order":2,"path":"sprites/sSlope0/sSlope0.yy",},
     {"name":"sSlope1","order":3,"path":"sprites/sSlope1/sSlope1.yy",},
     {"name":"sSlope2","order":4,"path":"sprites/sSlope2/sSlope2.yy",},

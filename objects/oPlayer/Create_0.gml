@@ -126,7 +126,7 @@ global.keyCount = 0;
 
 //death condition
 dead = false;
-
+counted_death = false;
 
 switch (room)
 {

@@ -661,23 +661,6 @@ if place_meeting(x, y, oGround)
 
 #endregion
 
-//--------------------------------
-#region
-//WALL
-	
-	
-	
-	//if (yspeed >= 0 && place_meeting(x + xspeed, y, oWall))
-	//{
-	//	setOnGround(false);
-
-	//}
-	
-	
-
-
-#endregion
-//--------------------------------
 
 #region
 //sprite control
@@ -717,12 +700,16 @@ if place_meeting(x+xspeed, y, oSpike)
 || place_meeting(x, y+yspeed, oSpike)
 {
 	dead = true;
+	if !counted_death
+	{
+		global.deathCount ++;
+	}
 	audio_play_sound(death_sound, 0, false, 1, 0, 1.5);
 }
 
 //Next level
 
-if place_meeting(x, y+yspeed, oDoor) && global.keyCount == 3
+if place_meeting(x, y+yspeed, oDoor) //&& global.keyCount == 3
 {
 	if (global.unlockedLevel < global.currentLevel + 1) 
 	{

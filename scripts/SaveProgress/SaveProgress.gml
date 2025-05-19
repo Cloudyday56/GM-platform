@@ -1,6 +1,7 @@
 function SaveProgress(){
 	var data = {}; // Struct
     data.level_unlocked = global.unlockedLevel;
+	data.death_count = global.deathCount;
     
     var json = json_stringify(data);
     var path = global.save_file;
