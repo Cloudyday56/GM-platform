@@ -303,15 +303,22 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 		coyoteJumpTimer = coyoteJumpFrame; //(JUMP) reset coyote jump time
 		
 	} 
+	//check "onWall"
+	if (yspeed >= 0 && place_meeting(x, y+yspeed, oWall)) || (xspeed >= 0 && place_meeting(x+xspeed, y, oWall))
+	{
+		setOnGround(true);
+
+	}
+	
 	else{//if falls
 		coyoteJumpTimer --; 
 		if jumpCount == 0 && coyoteJumpTimer <=0 //(JUMP) if in the air, did not jump, 
 												 //and passed the coyote time, 
-												 //cannot jump anymore
 		{
+			soundJumpCount = 1;
 			jumpCount = 1
 		};
-		coyoteHangTimer = 0; //(HANG) no more coyote hang time, i'm not sure if we need this line
+		//coyoteHangTimer = 0; //(HANG) no more coyote hang time, i'm not sure if we need this line
 	};
 
 	//jump (jump buffer details in GenFns
@@ -659,12 +666,6 @@ if place_meeting(x, y, oGround)
 //WALL
 	
 	
-	//check "onWall"
-	if (yspeed >= 0 && place_meeting(x, y+1, oWall))
-	{
-		setOnGround(true);
-
-	}
 	
 	//if (yspeed >= 0 && place_meeting(x + xspeed, y, oWall))
 	//{

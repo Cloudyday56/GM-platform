@@ -5,7 +5,13 @@ function setOnGround(val = true)
 	if val
 	{
 		onGround = true;
-		coyoteHangTimer = coyoteHangFrame; //(HANG) reset hang time
+		if abs(xspeed) > 2.5
+		{
+			coyoteHangTimer = coyoteHangFrame + 5; //(HANG) sort of momentum for running
+		}else
+		{
+			coyoteHangTimer = coyoteHangFrame; //(HANG) reset hang time
+		}
 	}else
 	{
 		onGround = false;
