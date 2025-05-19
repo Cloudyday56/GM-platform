@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"boom9",
+  "%Name":"death_sound",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.5746712,
-  "name":"boom9",
+  "duration":3.030204,
+  "name":"death_sound",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"boom9.wav",
-  "type":0,
+  "soundFile":"death_sound.mp3",
+  "type":1,
   "volume":0.3,
 }
