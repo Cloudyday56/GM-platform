@@ -33,7 +33,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.13.0.190",
+    "IDEVersion":"2024.13.1.193",
   },
   "name":"GM-platformer",
   "resources":[
@@ -132,6 +132,7 @@
     {"id":{"name":"sResume","path":"sprites/sResume/sResume.yy",},},
     {"id":{"name":"sSemiSolidMove","path":"sprites/sSemiSolidMove/sSemiSolidMove.yy",},},
     {"id":{"name":"sSemiSolidWall","path":"sprites/sSemiSolidWall/sSemiSolidWall.yy",},},
+    {"id":{"name":"sSkull","path":"sprites/sSkull/sSkull.yy",},},
     {"id":{"name":"sSlope0","path":"sprites/sSlope0/sSlope0.yy",},},
     {"id":{"name":"sSlope1","path":"sprites/sSlope1/sSlope1.yy",},},
     {"id":{"name":"sSlope2","path":"sprites/sSlope2/sSlope2.yy",},},
@@ -139,7 +140,6 @@
     {"id":{"name":"sSpaceRun","path":"sprites/sSpaceRun/sSpaceRun.yy",},},
     {"id":{"name":"sSpike","path":"sprites/sSpike/sSpike.yy",},},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},},
-    {"id":{"name":"sWhy","path":"sprites/sWhy/sWhy.yy",},},
     {"id":{"name":"sYes","path":"sprites/sYes/sYes.yy",},},
   ],
   "resourceType":"GMProject",
