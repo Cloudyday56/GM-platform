@@ -38,6 +38,8 @@
   "name":"GM-platformer",
   "resources":[
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
+    {"id":{"name":"FontNum","path":"fonts/FontNum/FontNum.yy",},},
+    {"id":{"name":"FontNumBig","path":"fonts/FontNumBig/FontNumBig.yy",},},
     {"id":{"name":"oBack","path":"objects/oBack/oBack.yy",},},
     {"id":{"name":"oBackButton","path":"objects/oBackButton/oBackButton.yy",},},
     {"id":{"name":"oButton_ingame","path":"objects/oButton_ingame/oButton_ingame.yy",},},

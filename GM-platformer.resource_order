@@ -19,6 +19,8 @@
   ],
   "ResourceOrderSettings":[
     {"name":"Font1","order":1,"path":"fonts/Font1/Font1.yy",},
+    {"name":"FontNum","order":2,"path":"fonts/FontNum/FontNum.yy",},
+    {"name":"FontNumBig","order":3,"path":"fonts/FontNumBig/FontNumBig.yy",},
     {"name":"oBack","order":15,"path":"objects/oBack/oBack.yy",},
     {"name":"oBackButton","order":4,"path":"objects/oBackButton/oBackButton.yy",},
     {"name":"oButtonBack","order":8,"path":"objects/oButtonBack/oButtonBack.yy",},
