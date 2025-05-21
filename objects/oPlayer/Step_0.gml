@@ -709,7 +709,7 @@ if place_meeting(x+xspeed, y, oSpike)
 
 //Next level
 
-if place_meeting(x, y+yspeed, oDoor) //&& global.keyCount == 3
+if place_meeting(x, y+yspeed, oDoor) && global.keyCount >= 3
 {
 	if (global.unlockedLevel < global.currentLevel + 1) 
 	{
