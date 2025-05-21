@@ -1239,10 +1239,10 @@
   "resourceType":"GMRoom",
   "resourceVersion":"2.0",
   "roomSettings":{
-    "Height":700,
+    "Height":704,
     "inheritRoomSettings":false,
     "persistent":false,
-    "Width":1020,
+    "Width":1024,
   },
   "sequenceId":null,
   "views":[
