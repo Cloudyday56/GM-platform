@@ -11,6 +11,7 @@
     {"name":"Rooms","order":4,"path":"folders/Rooms.yy",},
     {"name":"Scripts","order":2,"path":"folders/Scripts.yy",},
     {"name":"Sounds","order":1,"path":"folders/Sounds.yy",},
+    {"name":"colorBack","order":40,"path":"folders/Sprites/colorBack.yy",},
     {"name":"Menu","order":28,"path":"folders/Sprites/Menu.yy",},
     {"name":"PauseButtons","order":27,"path":"folders/Sprites/PauseButtons.yy",},
     {"name":"PlayerSprite","order":37,"path":"folders/Sprites/PlayerSprite.yy",},
