@@ -9,3 +9,4 @@ if (global.unlockedLevel < levelNumber)
 {
     sprite_index = sLevelUnlock;
 }
+
