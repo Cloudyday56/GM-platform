@@ -709,7 +709,7 @@ if place_meeting(x+xspeed, y, oSpike)
 
 //Next level
 
-if place_meeting(x, y+yspeed, oDoor) //&& global.keyCount >= 3
+if place_meeting(x, y+yspeed, oDoor) && global.keyCount >= 3
 {
 	if (global.unlockedLevel < global.currentLevel + 1) 
 	{
@@ -723,14 +723,12 @@ if place_meeting(x, y+yspeed, oDoor) //&& global.keyCount >= 3
 
 #endregion
 
-if (jumpkeyPressed && !dead && (soundJumpCount < 2)) {
+if (jumpkeyPressed && !dead && (soundJumpCount < maxSoundJumpCount)) {
 	audio_play_sound(jump_sound, 0, false, 1, 0.20);
 	soundJumpCount++;
 }
 
-if (onGround) {
-	soundJumpCount = 0;
-}
+
 
 
 
