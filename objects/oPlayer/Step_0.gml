@@ -170,7 +170,13 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 #region
 //X Movement
 	//Direction
-	moveDir = rightKey - leftKey;
+	if room == r8
+	{
+		moveDir = leftKey - rightKey;
+	}else
+	{
+		moveDir = rightKey - leftKey;
+	}
 	
 	//Get face (facing which side)
 	if moveDir != 0
