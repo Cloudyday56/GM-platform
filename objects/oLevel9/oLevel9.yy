@@ -7,11 +7,11 @@
   "managed":true,
   "name":"oLevel9",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelParent","path":"objects/oLevelParent/oLevelParent.yy",},"propertyId":{"name":"levelTitle","path":"objects/oLevelParent/oLevelParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Dash",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelParent","path":"objects/oLevelParent/oLevelParent.yy",},"propertyId":{"name":"levelTitle","path":"objects/oLevelParent/oLevelParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Spikes",},
   ],
   "parent":{
-    "name":"9Dash",
-    "path":"folders/Objects/LevelButtons/9Dash.yy",
+    "name":"9Spikes",
+    "path":"folders/Objects/LevelButtons/9Spikes.yy",
   },
   "parentObjectId":{
     "name":"oLevelParent",
