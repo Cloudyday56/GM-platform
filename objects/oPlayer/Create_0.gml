@@ -72,8 +72,18 @@ crouchSpd = 1;
 	moveDir = 0; //going left or right
 
 	moveType = 0; //running or walking
-	moveSpd[0] = 2; //walking speed
-	moveSpd[1] = 3.5; //running speed
+	if room == ra10
+	{
+		moveSpd[0] = 8; //walking speed
+		moveSpd[1] = 14; //running speed
+		jumpSpd = -9;
+	}
+	else
+	{
+		moveSpd[0] = 2; //walking speed
+		moveSpd[1] = 3.5; //running speed
+		jumpSpd = -3; //jump speed (modify yspeed)
+	}
 	//used as moveSpd[moveType]
 
 	xspeed = 0;
@@ -84,7 +94,7 @@ crouchSpd = 1;
 	grav = .25; //gravity
 	//termVel = 4; //speed upper bound, not necessary
 
-	jumpSpd = -3; //jump speed (modify yspeed)
+	
 	
 	if room == r6//fly room
 	{

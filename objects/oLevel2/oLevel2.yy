@@ -7,11 +7,11 @@
   "managed":true,
   "name":"oLevel2",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelParent","path":"objects/oLevelParent/oLevelParent.yy",},"propertyId":{"name":"levelTitle","path":"objects/oLevelParent/oLevelParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Rotate",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelParent","path":"objects/oLevelParent/oLevelParent.yy",},"propertyId":{"name":"levelTitle","path":"objects/oLevelParent/oLevelParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Platforms",},
   ],
   "parent":{
-    "name":"2Rotate",
-    "path":"folders/Objects/LevelButtons/2Rotate.yy",
+    "name":"2Platforms",
+    "path":"folders/Objects/LevelButtons/2Platforms.yy",
   },
   "parentObjectId":{
     "name":"oLevelParent",

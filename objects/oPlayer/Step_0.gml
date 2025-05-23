@@ -709,6 +709,7 @@ if place_meeting(x+xspeed, y, oSpike)
 	if !counted_death
 	{
 		global.deathCount ++;
+		SaveProgress();
 	}
 	audio_play_sound(death_sound, 0, false, 1, 0, 1.5);
 }
