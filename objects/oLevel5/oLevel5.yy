@@ -7,11 +7,11 @@
   "managed":true,
   "name":"oLevel5",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelParent","path":"objects/oLevelParent/oLevelParent.yy",},"propertyId":{"name":"levelTitle","path":"objects/oLevelParent/oLevelParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Gravity",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelParent","path":"objects/oLevelParent/oLevelParent.yy",},"propertyId":{"name":"levelTitle","path":"objects/oLevelParent/oLevelParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Slopes",},
   ],
   "parent":{
-    "name":"5Gravity",
-    "path":"folders/Objects/LevelButtons/5Gravity.yy",
+    "name":"5Slopes",
+    "path":"folders/Objects/LevelButtons/5Slopes.yy",
   },
   "parentObjectId":{
     "name":"oLevelParent",
