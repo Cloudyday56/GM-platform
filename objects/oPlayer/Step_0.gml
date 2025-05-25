@@ -170,7 +170,13 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 #region
 //X Movement
 	//Direction
-	moveDir = rightKey - leftKey;
+	if room == r8
+	{
+		moveDir = leftKey - rightKey;
+	}else
+	{
+		moveDir = rightKey - leftKey;
+	}
 	
 	//Get face (facing which side)
 	if moveDir != 0
@@ -338,8 +344,13 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 	
 		jumpCount ++; //increase jump count
 	
-	    jumpHoldTime = jumpHoldFrame; //can be held (look at next ifs)
-		
+		if room == ra10
+		{
+			jumpHoldTime = jumpHoldFrame + 10;
+		}else
+		{
+			jumpHoldTime = jumpHoldFrame; //can be held (look at next ifs)
+		}
 		setOnGround(false); //no longer on ground
 	
 	}
@@ -703,13 +714,14 @@ if place_meeting(x+xspeed, y, oSpike)
 	if !counted_death
 	{
 		global.deathCount ++;
+		SaveProgress();
 	}
 	audio_play_sound(death_sound, 0, false, 1, 0, 1.5);
 }
 
 //Next level
 
-if place_meeting(x, y+yspeed, oDoor) //&& global.keyCount >= 3
+if place_meeting(x, y+yspeed, oDoor) && global.keyCount >= 3
 {
 	if (global.unlockedLevel < global.currentLevel + 1) 
 	{
@@ -723,14 +735,12 @@ if place_meeting(x, y+yspeed, oDoor) //&& global.keyCount >= 3
 
 #endregion
 
-if (jumpkeyPressed && !dead && (soundJumpCount < 2)) {
+if (jumpkeyPressed && !dead && (soundJumpCount < maxSoundJumpCount)) {
 	audio_play_sound(jump_sound2, 0, false, 1, 0.20);
 	soundJumpCount++;
 }
 
-if (onGround) {
-	soundJumpCount = 0;
-}
+
 
 
 

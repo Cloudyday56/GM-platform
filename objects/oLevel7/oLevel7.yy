@@ -10,8 +10,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelParent","path":"objects/oLevelParent/oLevelParent.yy",},"propertyId":{"name":"levelTitle","path":"objects/oLevelParent/oLevelParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Huge",},
   ],
   "parent":{
-    "name":"LevelButtons",
-    "path":"folders/Objects/LevelButtons.yy",
+    "name":"7Huge",
+    "path":"folders/Objects/LevelButtons/7Huge.yy",
   },
   "parentObjectId":{
     "name":"oLevelParent",

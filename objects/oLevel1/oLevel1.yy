@@ -7,11 +7,11 @@
   "managed":true,
   "name":"oLevel1",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelParent","path":"objects/oLevelParent/oLevelParent.yy",},"propertyId":{"name":"levelTitle","path":"objects/oLevelParent/oLevelParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Jump",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelParent","path":"objects/oLevelParent/oLevelParent.yy",},"propertyId":{"name":"levelTitle","path":"objects/oLevelParent/oLevelParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Slopes",},
   ],
   "parent":{
-    "name":"LevelButtons",
-    "path":"folders/Objects/LevelButtons.yy",
+    "name":"1Slopes",
+    "path":"folders/Objects/LevelButtons/1Slopes.yy",
   },
   "parentObjectId":{
     "name":"oLevelParent",
