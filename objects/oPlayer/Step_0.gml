@@ -312,7 +312,7 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 		
 	} 
 	//check "onWall"
-	if !(yspeed >= 0 && place_meeting(x, y+yspeed, oWall)) || !(xspeed >= 0 && place_meeting(x+xspeed, y, oWall))
+	if !(yspeed >= 0 && place_meeting(x, y+yspeed, oWall)) || !(abs(xspeed) >= 0 && place_meeting(x+xspeed, y, oWall))
 	{//if falls
 		coyoteJumpTimer --; 
 		if jumpCount == 0 && coyoteJumpTimer <=0 //(JUMP) if in the air, did not jump, 
@@ -686,14 +686,17 @@ if place_meeting(x, y, oGround)
 	{
 		sprite_index = spr_idle;
 	}
-	if (yspeed >= 0 && place_meeting(x, y+yspeed, oWall)) || (xspeed >= 0 && place_meeting(x+xspeed, y, oWall))
-	{
-		sprite_index = spr_stick;
-	}
+
 	if !onGround
 	{
-		sprite_index = spr_jump;
-		
+		if (place_meeting(x+1, y, oWall)) || (place_meeting(x-1, y, oWall))
+		{
+			sprite_index =  spr_stick;
+		}
+		else
+		{
+			sprite_index = spr_jump;	
+		}
 	}
 	if !crouching
 	{
