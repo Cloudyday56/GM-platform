@@ -85,6 +85,7 @@
     {"name":"SaveProgress","order":1,"path":"scripts/SaveProgress/SaveProgress.yy",},
     {"name":"death_sound","order":6,"path":"sounds/death_sound/death_sound.yy",},
     {"name":"jump_sound","order":1,"path":"sounds/jump_sound/jump_sound.yy",},
+    {"name":"jump_sound2","order":8,"path":"sounds/jump_sound2/jump_sound2.yy",},
     {"name":"key_pickup_sound","order":2,"path":"sounds/key_pickup_sound/key_pickup_sound.yy",},
     {"name":"menu_select","order":7,"path":"sounds/menu_select/menu_select.yy",},
     {"name":"sBackground","order":23,"path":"sprites/sBackground/sBackground.yy",},

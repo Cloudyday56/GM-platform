@@ -736,7 +736,7 @@ if place_meeting(x, y+yspeed, oDoor) && global.keyCount >= 3
 #endregion
 
 if (jumpkeyPressed && !dead && (soundJumpCount < maxSoundJumpCount)) {
-	audio_play_sound(jump_sound, 0, false, 1, 0.20);
+	audio_play_sound(jump_sound2, 0, false, 1, 0.20);
 	soundJumpCount++;
 }
 
