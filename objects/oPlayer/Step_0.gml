@@ -344,8 +344,13 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 	
 		jumpCount ++; //increase jump count
 	
-	    jumpHoldTime = jumpHoldFrame; //can be held (look at next ifs)
-		
+		if room == ra10
+		{
+			jumpHoldTime = jumpHoldFrame + 10;
+		}else
+		{
+			jumpHoldTime = jumpHoldFrame; //can be held (look at next ifs)
+		}
 		setOnGround(false); //no longer on ground
 	
 	}
