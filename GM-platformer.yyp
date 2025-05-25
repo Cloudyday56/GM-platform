@@ -34,7 +34,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.13.1.193",
+    "IDEVersion":"2024.13.0.190",
   },
   "name":"GM-platformer",
   "resources":[
@@ -110,6 +110,7 @@
     {"id":{"name":"death_sound","path":"sounds/death_sound/death_sound.yy",},},
     {"id":{"name":"GameMusic","path":"sounds/GameMusic/GameMusic.yy",},},
     {"id":{"name":"jump_sound","path":"sounds/jump_sound/jump_sound.yy",},},
+    {"id":{"name":"jump_sound2","path":"sounds/jump_sound2/jump_sound2.yy",},},
     {"id":{"name":"key_pickup_sound","path":"sounds/key_pickup_sound/key_pickup_sound.yy",},},
     {"id":{"name":"menu_select","path":"sounds/menu_select/menu_select.yy",},},
     {"id":{"name":"caveBack","path":"sprites/caveBack/caveBack.yy",},},
