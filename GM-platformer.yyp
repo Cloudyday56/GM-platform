@@ -44,7 +44,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.13.0.190",
+    "IDEVersion":"2024.13.1.193",
   },
   "name":"GM-platformer",
   "resources":[
@@ -143,6 +143,7 @@
     {"id":{"name":"sPlayer_idle","path":"sprites/sPlayer_idle/sPlayer_idle.yy",},},
     {"id":{"name":"sPlayer_jump","path":"sprites/sPlayer_jump/sPlayer_jump.yy",},},
     {"id":{"name":"sPlayer_run","path":"sprites/sPlayer_run/sPlayer_run.yy",},},
+    {"id":{"name":"sPlayer_stick","path":"sprites/sPlayer_stick/sPlayer_stick.yy",},},
     {"id":{"name":"sPlayer_walk","path":"sprites/sPlayer_walk/sPlayer_walk.yy",},},
     {"id":{"name":"sQuit","path":"sprites/sQuit/sQuit.yy",},},
     {"id":{"name":"sResume","path":"sprites/sResume/sResume.yy",},},

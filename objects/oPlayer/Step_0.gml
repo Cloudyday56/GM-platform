@@ -135,6 +135,7 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 		
 		if crouching
 		{
+			sprite_index = spr_crouch;
 			mask_index = spr_crouch;
 		}
 		
@@ -306,17 +307,13 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 	if onGround
 	{ 
 		jumpCount = 0 //reset jump count
+		soundJumpCount = 0; 
 		coyoteJumpTimer = coyoteJumpFrame; //(JUMP) reset coyote jump time
 		
 	} 
 	//check "onWall"
-	if (yspeed >= 0 && place_meeting(x, y+yspeed, oWall)) || (xspeed >= 0 && place_meeting(x+xspeed, y, oWall))
-	{
-		setOnGround(true);
-
-	}
-	
-	else{//if falls
+	if !(yspeed >= 0 && place_meeting(x, y+yspeed, oWall)) || !(xspeed >= 0 && place_meeting(x+xspeed, y, oWall))
+	{//if falls
 		coyoteJumpTimer --; 
 		if jumpCount == 0 && coyoteJumpTimer <=0 //(JUMP) if in the air, did not jump, 
 												 //and passed the coyote time, 
@@ -689,16 +686,20 @@ if place_meeting(x, y, oGround)
 	{
 		sprite_index = spr_idle;
 	}
-	if !onGround 
+	if (yspeed >= 0 && place_meeting(x, y+yspeed, oWall)) || (xspeed >= 0 && place_meeting(x+xspeed, y, oWall))
+	{
+		sprite_index = spr_stick;
+	}
+	if !onGround
 	{
 		sprite_index = spr_jump;
+		
 	}
-	if crouching
+	if !crouching
 	{
-		sprite_index = spr_crouch;
-	}
 		//set collision mask
 		mask_index = spr_idle;
+	}
 
 //reset game
 if resetKey

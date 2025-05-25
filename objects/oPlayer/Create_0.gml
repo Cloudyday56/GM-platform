@@ -12,7 +12,7 @@ function setOnGround(val = true)
 		{
 			coyoteHangTimer = coyoteHangFrame; //(HANG) reset hang time
 		}
-		soundJumpCount = 0;
+		
 	}else
 	{
 		onGround = false;
@@ -60,6 +60,7 @@ spr_idle = sPlayer_idle;
 spr_walk = sPlayer_walk;
 spr_run = sPlayer_run;
 spr_jump = sPlayer_jump;
+spr_stick = sPlayer_stick;
 
 //state
 crouching = false;
@@ -111,6 +112,7 @@ crouchSpd = 1;
 	}
 	jumpCount = 0; //jump count
 	
+	soundJumpCount = 0;
 
 	jumpHoldTime = 0; 
 	jumpHoldFrame = 15;
