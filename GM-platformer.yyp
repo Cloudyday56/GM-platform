@@ -23,7 +23,7 @@
     {"$GMFolder":"","%Name":"7Huge","folderPath":"folders/Objects/LevelButtons/7Huge.yy","name":"7Huge","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"8Reversed","folderPath":"folders/Objects/LevelButtons/8Reversed.yy","name":"8Reversed","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"9Spikes","folderPath":"folders/Objects/LevelButtons/9Spikes.yy","name":"9Spikes","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"a10Speed","folderPath":"folders/Objects/LevelButtons/a10Speed.yy","name":"a10Speed","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"a10Float","folderPath":"folders/Objects/LevelButtons/a10Float.yy","name":"a10Float","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"MenuButtons","folderPath":"folders/Objects/MenuButtons.yy","name":"MenuButtons","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"PauseButtons","folderPath":"folders/Objects/PauseButtons.yy","name":"PauseButtons","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Terrain","folderPath":"folders/Objects/Terrain.yy","name":"Terrain","resourceType":"GMFolder","resourceVersion":"2.0",},

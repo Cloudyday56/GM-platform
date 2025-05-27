@@ -61,11 +61,10 @@ spr_walk = sPlayer_walk;
 spr_run = sPlayer_run;
 spr_jump = sPlayer_jump;
 spr_stick = sPlayer_stick;
-
-//state
-crouching = false;
 spr_crouch = sPlayer_crouching;
-crouchSpd = 1;
+crouching = false;
+
+
 
 //Moving
 
@@ -76,17 +75,25 @@ crouchSpd = 1;
 	
 	if room == ra10 //speed room
 	{
-		moveSpd[0] = 8; //walking speed
-		moveSpd[1] = 14; //running speed
-		jumpSpd = -3;
-		grav = .05
+		moveSpd[0] = 6; 
+		moveSpd[1] = 10.5; 
+		jumpSpd = -5;
+		grav = -0.05;
+		crouchSpd = 2;
+	}
+	else if room == r7
+	{
+		moveSpd[0] = 3.5; 
+		moveSpd[1] = 5.5; 
+		jumpSpd = -3.5;
+		grav = .20;
+		crouchSpd = 1.5;
 	}
 	else
 	{
 		moveSpd[0] = 2; //walking speed
 		moveSpd[1] = 3.5; //running speed
-		
-		//jumping
+		crouchSpd = 1; //crouch speed
 		jumpSpd = -3; //jump speed (modify yspeed)
 		grav = .25; //gravity
 	}
