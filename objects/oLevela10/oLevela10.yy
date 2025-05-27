@@ -7,11 +7,11 @@
   "managed":true,
   "name":"oLevela10",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelParent","path":"objects/oLevelParent/oLevelParent.yy",},"propertyId":{"name":"levelTitle","path":"objects/oLevelParent/oLevelParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Speed",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelParent","path":"objects/oLevelParent/oLevelParent.yy",},"propertyId":{"name":"levelTitle","path":"objects/oLevelParent/oLevelParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Float",},
   ],
   "parent":{
-    "name":"a10Speed",
-    "path":"folders/Objects/LevelButtons/a10Speed.yy",
+    "name":"a10Float",
+    "path":"folders/Objects/LevelButtons/a10Float.yy",
   },
   "parentObjectId":{
     "name":"oLevelParent",

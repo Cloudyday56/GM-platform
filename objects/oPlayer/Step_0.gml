@@ -133,11 +133,11 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 		}
 		*/
 		
-		if crouching
-		{
-			sprite_index = spr_crouch;
-			mask_index = spr_crouch;
-		}
+		//if crouching
+		//{
+		//	sprite_index = spr_crouch;
+		//	mask_index = spr_crouch;
+		//}
 		
 	
 	//out of crouch
@@ -298,7 +298,21 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 	}
 	else
 	{
-		yspeed += grav; //Apply gravity after coyote time
+		if room == ra10
+		{
+			if yspeed < -2
+			{
+				yspeed = -2;
+			}
+			else 
+			{
+				yspeed += grav; 
+			}
+		}
+		else
+		{
+			yspeed += grav; //Apply gravity after coyote time
+		}
 		setOnGround(false); //in the air
 	}
 
@@ -702,6 +716,10 @@ if place_meeting(x, y, oGround)
 	{
 		//set collision mask
 		mask_index = spr_idle;
+	}else
+	{
+		sprite_index = spr_crouch;
+		mask_index = spr_crouch;
 	}
 
 //reset game

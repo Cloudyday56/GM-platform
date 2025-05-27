@@ -13,7 +13,7 @@
     {"name":"7Huge","order":18,"path":"folders/Objects/LevelButtons/7Huge.yy",},
     {"name":"8Reversed","order":19,"path":"folders/Objects/LevelButtons/8Reversed.yy",},
     {"name":"9Spikes","order":20,"path":"folders/Objects/LevelButtons/9Spikes.yy",},
-    {"name":"a10Speed","order":21,"path":"folders/Objects/LevelButtons/a10Speed.yy",},
+    {"name":"a10Float","order":21,"path":"folders/Objects/LevelButtons/a10Float.yy",},
     {"name":"MenuButtons","order":17,"path":"folders/Objects/MenuButtons.yy",},
     {"name":"PauseButtons","order":18,"path":"folders/Objects/PauseButtons.yy",},
     {"name":"Terrain","order":24,"path":"folders/Objects/Terrain.yy",},
