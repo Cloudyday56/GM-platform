@@ -763,7 +763,18 @@ if (jumpkeyPressed && !dead && (soundJumpCount < maxSoundJumpCount)) {
 }
 
 
+//if place_meeting(x, y, oSpiral) && gravChange == false
+//{
+//	grav *= -1;
+//	y += grav;
+//	gravChange = true;
+//	jumpkeyPressed = true;
+//}
 
+//if place_meeting(x, y+1, oGround) || place_meeting(x, y-1, oGround)
+//{
+//	gravChange = false;
+//}
 
 
 
