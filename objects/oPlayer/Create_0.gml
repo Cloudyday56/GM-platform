@@ -177,3 +177,6 @@ switch (room)
 
 
 
+gravChange = false;
+
+
