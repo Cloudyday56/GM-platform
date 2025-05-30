@@ -122,6 +122,7 @@
     {"id":{"name":"GenFns","path":"scripts/GenFns/GenFns.yy",},},
     {"id":{"name":"LoadProgress","path":"scripts/LoadProgress/LoadProgress.yy",},},
     {"id":{"name":"SaveProgress","path":"scripts/SaveProgress/SaveProgress.yy",},},
+    {"id":{"name":"Script4","path":"scripts/Script4/Script4.yy",},},
     {"id":{"name":"death_sound","path":"sounds/death_sound/death_sound.yy",},},
     {"id":{"name":"GameMusic","path":"sounds/GameMusic/GameMusic.yy",},},
     {"id":{"name":"jump_sound","path":"sounds/jump_sound/jump_sound.yy",},},
