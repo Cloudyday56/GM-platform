@@ -88,6 +88,7 @@
     {"name":"RoomUI","order":8,"path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"LoadProgress","order":2,"path":"scripts/LoadProgress/LoadProgress.yy",},
     {"name":"SaveProgress","order":1,"path":"scripts/SaveProgress/SaveProgress.yy",},
+    {"name":"Script4","order":16,"path":"scripts/Script4/Script4.yy",},
     {"name":"death_sound","order":6,"path":"sounds/death_sound/death_sound.yy",},
     {"name":"jump_sound","order":1,"path":"sounds/jump_sound/jump_sound.yy",},
     {"name":"jump_sound2","order":8,"path":"sounds/jump_sound2/jump_sound2.yy",},
