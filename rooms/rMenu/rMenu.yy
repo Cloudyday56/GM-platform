@@ -18,6 +18,7 @@
     {"name":"inst_2C016697","path":"rooms/rMenu/rMenu.yy",},
     {"name":"inst_1A14D778","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_180071F2","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_154095","path":"rooms/rMenu/rMenu.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -29,6 +30,7 @@
         {"$GMRInstance":"v2","%Name":"inst_17D1CEDC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_17D1CEDC","objectId":{"name":"oButtonControls","path":"objects/oButtonControls/oButtonControls.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.4117646,"scaleY":1.7887324,"x":1072.0,"y":464.0,},
         {"$GMRInstance":"v2","%Name":"inst_4D7DF97E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4D7DF97E","objectId":{"name":"oButtonPlay","path":"objects/oButtonPlay/oButtonPlay.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.4117646,"scaleY":1.7887324,"x":1072.0,"y":352.0,},
         {"$GMRInstance":"v2","%Name":"inst_1BECEC41","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1BECEC41","objectId":{"name":"oButtonQuit","path":"objects/oButtonQuit/oButtonQuit.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.4117646,"scaleY":1.7887324,"x":1072.0,"y":576.0,},
+        {"$GMRInstance":"v2","%Name":"inst_154095","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_154095","objectId":{"name":"oKeyControl","path":"objects/oKeyControl/oKeyControl.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1104.0,"y":240.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":0,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

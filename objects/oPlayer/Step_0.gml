@@ -764,6 +764,8 @@ if place_meeting(x, y+yspeed, oDoor) && global.keyCount >= 3
 		SaveProgress();
 	}
 	
+    ds_map_replace(global.collectedKeys, room, 0); // reset for re-entry
+    global.keyCount = 0;
 	room_goto_next();
 		
 }
