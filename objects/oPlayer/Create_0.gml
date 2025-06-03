@@ -56,18 +56,25 @@ controlsSetup(); //import the code from the script
 
 
 //different sprites for oPlayer
-spr_idle = sPlayer_idle;
-spr_walk = sPlayer_walk;
-spr_run = sPlayer_run;
+
 if room != ra10 
 {
 	spr_jump = sPlayer_jump;
+	spr_idle = sPlayer_idle;
+	spr_walk = sPlayer_walk;
+	spr_run = sPlayer_run;
+	spr_stick = sPlayer_stick;
+	spr_crouch = sPlayer_crouching;
 }else
 {
 	spr_jump = sPlayer_jumpCool;
+	spr_idle = sPlayer_idle;
+	spr_walk = sPlayer_walk;
+	spr_run = sPlayer_run;
+	spr_stick = sPlayer_stick;
+	spr_crouch = sPlayer_crouching;
 }
-spr_stick = sPlayer_stick;
-spr_crouch = sPlayer_crouching;
+
 crouching = false;
 
 
@@ -160,7 +167,10 @@ maxDroppingSpeed = 8; //to stick to platform
 
 
 //collectables
-global.keyCount = 0;
+if (!ds_map_exists(global.collectedKeys, room)) {
+    ds_map_add(global.collectedKeys, room, 0);
+}
+
 
 //death condition
 dead = false;
