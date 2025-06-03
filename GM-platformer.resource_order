@@ -107,6 +107,7 @@
     {"name":"sPath","order":41,"path":"sprites/sPath/sPath.yy",},
     {"name":"sPlayer_idle","order":1,"path":"sprites/sPlayer_idle/sPlayer_idle.yy",},
     {"name":"sPlayer_jump","order":2,"path":"sprites/sPlayer_jump/sPlayer_jump.yy",},
+    {"name":"sPlayer_jumpCool","order":6,"path":"sprites/sPlayer_jumpCool/sPlayer_jumpCool.yy",},
     {"name":"sPlayer_run","order":3,"path":"sprites/sPlayer_run/sPlayer_run.yy",},
     {"name":"sPlayer_stick","order":5,"path":"sprites/sPlayer_stick/sPlayer_stick.yy",},
     {"name":"sPlayer_walk","order":4,"path":"sprites/sPlayer_walk/sPlayer_walk.yy",},
