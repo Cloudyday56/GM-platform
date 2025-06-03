@@ -776,7 +776,6 @@ if (jumpkeyPressed && !dead && (soundJumpCount < maxSoundJumpCount)) {
 }
 
 
-
 //if place_meeting(x, y, oSpiral) && gravChange == false
 //{
 //	grav *= -1;

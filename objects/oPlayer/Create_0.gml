@@ -59,7 +59,13 @@ controlsSetup(); //import the code from the script
 spr_idle = sPlayer_idle;
 spr_walk = sPlayer_walk;
 spr_run = sPlayer_run;
-spr_jump = sPlayer_jump;
+if room != ra10 
+{
+	spr_jump = sPlayer_jump;
+}else
+{
+	spr_jump = sPlayer_jumpCool;
+}
 spr_stick = sPlayer_stick;
 spr_crouch = sPlayer_crouching;
 crouching = false;
