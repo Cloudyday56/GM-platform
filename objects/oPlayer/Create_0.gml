@@ -75,11 +75,11 @@ crouching = false;
 	
 	if room == ra10 //speed room
 	{
-		moveSpd[0] = 6; 
-		moveSpd[1] = 10.5; 
-		jumpSpd = -5;
-		grav = -0.05;
-		crouchSpd = 2;
+		moveSpd[0] = 3; 
+		moveSpd[1] = 5; 
+		jumpSpd = -3;
+		grav = 0.15;
+		crouchSpd = 1;
 	}
 	else if room == r7
 	{
@@ -177,6 +177,6 @@ switch (room)
 
 
 
-gravChange = false;
+//gravChange = false;
 
 

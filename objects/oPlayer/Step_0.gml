@@ -300,13 +300,26 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 	{
 		if room == ra10
 		{
-			if yspeed < -2
+			var max_speed = 2;
+
+			// Clamp yspeed based on the direction of gravity
+			if grav < 0
 			{
-				yspeed = -2;
+				if yspeed < -max_speed {
+					yspeed = -max_speed;
+				}
+				else {
+					yspeed += grav;
+				}
 			}
-			else 
+			else
 			{
-				yspeed += grav; 
+				if yspeed > max_speed {
+					yspeed = max_speed;
+				}
+				else {
+					yspeed += grav;
+				}
 			}
 		}
 		else
@@ -357,7 +370,7 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 	
 		if room == ra10
 		{
-			jumpHoldTime = jumpHoldFrame + 10;
+			jumpHoldTime = jumpHoldFrame + 2;
 		}else
 		{
 			jumpHoldTime = jumpHoldFrame; //can be held (look at next ifs)
@@ -761,6 +774,7 @@ if (jumpkeyPressed && !dead && (soundJumpCount < maxSoundJumpCount)) {
 	audio_play_sound(jump_sound2, 0, false, 1, 0.20);
 	soundJumpCount++;
 }
+
 
 
 //if place_meeting(x, y, oSpiral) && gravChange == false
