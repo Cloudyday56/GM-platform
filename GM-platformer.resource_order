@@ -71,7 +71,7 @@
     {"name":"oSpikeMovingHor","order":14,"path":"objects/oSpikeMovingHor/oSpikeMovingHor.yy",},
     {"name":"oSpikeMovingHor2","order":16,"path":"objects/oSpikeMovingHor2/oSpikeMovingHor2.yy",},
     {"name":"oSpikeMovingVer","order":15,"path":"objects/oSpikeMovingVer/oSpikeMovingVer.yy",},
-    {"name":"oSpiral","order":26,"path":"objects/oSpiral/oSpiral.yy",},
+    {"name":"oSpiral","order":17,"path":"objects/oSpiral/oSpiral.yy",},
     {"name":"oWall","order":7,"path":"objects/oWall/oWall.yy",},
     {"name":"r1","order":2,"path":"rooms/r1/r1.yy",},
     {"name":"r2","order":1,"path":"rooms/r2/r2.yy",},
