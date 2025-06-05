@@ -104,6 +104,7 @@
     {"id":{"name":"oSpikeMovingHor2","path":"objects/oSpikeMovingHor2/oSpikeMovingHor2.yy",},},
     {"id":{"name":"oSpikeMovingVer","path":"objects/oSpikeMovingVer/oSpikeMovingVer.yy",},},
     {"id":{"name":"oSpiral","path":"objects/oSpiral/oSpiral.yy",},},
+    {"id":{"name":"oSpiralMove","path":"objects/oSpiralMove/oSpiralMove.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"oYes","path":"objects/oYes/oYes.yy",},},
     {"id":{"name":"r1","path":"rooms/r1/r1.yy",},},
