@@ -22,6 +22,7 @@
     {"name":"inst_1A7284F7","path":"rooms/rLevels/rLevels.yy",},
     {"name":"inst_2D896B48","path":"rooms/rLevels/rLevels.yy",},
     {"name":"inst_37E61AFB","path":"rooms/rLevels/rLevels.yy",},
+    {"name":"inst_77E7198B","path":"rooms/rLevels/rLevels.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -62,6 +63,7 @@
         {"$GMRInstance":"v2","%Name":"inst_515EC77A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_515EC77A","objectId":{"name":"oButtonBack","path":"objects/oButtonBack/oButtonBack.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.4117646,"scaleY":1.8695652,"x":1120.0,"y":512.0,},
         {"$GMRInstance":"v2","%Name":"inst_3C7764F5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3C7764F5","objectId":{"name":"oButtonReset","path":"objects/oButtonReset/oButtonReset.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.4117646,"scaleY":1.8695651,"x":1120.0,"y":608.0,},
         {"$GMRInstance":"v2","%Name":"inst_37E61AFB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_37E61AFB","objectId":{"name":"oDeathCount","path":"objects/oDeathCount/oDeathCount.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.5,"scaleY":1.5,"x":128.0,"y":48.0,},
+        {"$GMRInstance":"v2","%Name":"inst_77E7198B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_77E7198B","objectId":{"name":"oLevelWin","path":"objects/oLevelWin/oLevelWin.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":512.0,"y":400.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

@@ -1,22 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"oLevela10",
+  "%Name":"oLevelWin",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oLevela10",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelParent","path":"objects/oLevelParent/oLevelParent.yy",},"propertyId":{"name":"levelTitle","path":"objects/oLevelParent/oLevelParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Gravity",},
-  ],
+  "name":"oLevelWin",
+  "overriddenProperties":[],
   "parent":{
-    "name":"a10Gravity",
-    "path":"folders/Objects/LevelButtons/a10Gravity.yy",
+    "name":"LevelButtons",
+    "path":"folders/Objects/LevelButtons.yy",
   },
-  "parentObjectId":{
-    "name":"oLevelParent",
-    "path":"objects/oLevelParent/oLevelParent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
