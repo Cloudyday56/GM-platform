@@ -105,6 +105,8 @@
     {"name":"sDoubJump","order":1,"path":"sprites/sDoubJump/sDoubJump.yy",},
     {"name":"sGround","order":9,"path":"sprites/sGround/sGround.yy",},
     {"name":"sGroundMove","order":10,"path":"sprites/sGroundMove/sGroundMove.yy",},
+    {"name":"sJumpOff","order":45,"path":"sprites/sJumpOff/sJumpOff.yy",},
+    {"name":"sJumpOn","order":44,"path":"sprites/sJumpOn/sJumpOn.yy",},
     {"name":"sKey","order":21,"path":"sprites/sKey/sKey.yy",},
     {"name":"sKeyOff","order":22,"path":"sprites/sKeyOff/sKeyOff.yy",},
     {"name":"sLevelLock","order":32,"path":"sprites/sLevelLock/sLevelLock.yy",},
