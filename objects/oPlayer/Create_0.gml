@@ -193,6 +193,5 @@ switch (room)
 
 
 
-//gravChange = false;
 
 

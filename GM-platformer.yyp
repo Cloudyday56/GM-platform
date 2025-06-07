@@ -144,6 +144,8 @@
     {"id":{"name":"sDoubJump","path":"sprites/sDoubJump/sDoubJump.yy",},},
     {"id":{"name":"sGround","path":"sprites/sGround/sGround.yy",},},
     {"id":{"name":"sGroundMove","path":"sprites/sGroundMove/sGroundMove.yy",},},
+    {"id":{"name":"sJumpOff","path":"sprites/sJumpOff/sJumpOff.yy",},},
+    {"id":{"name":"sJumpOn","path":"sprites/sJumpOn/sJumpOn.yy",},},
     {"id":{"name":"sKey","path":"sprites/sKey/sKey.yy",},},
     {"id":{"name":"sKeyOff","path":"sprites/sKeyOff/sKeyOff.yy",},},
     {"id":{"name":"sLevelLock","path":"sprites/sLevelLock/sLevelLock.yy",},},
