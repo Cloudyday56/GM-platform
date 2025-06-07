@@ -6,7 +6,7 @@ if room != r6
 {
 	draw_set_alpha(0.7);
 	var offsetX = 10;       // Bottom-left x position
-	var offsetY = 12;		// Start from bottom
+	var offsetY = 10;		// Start from bottom
 
 	for (var i = 0; i < jumpMax; i++) {
 	    var sprite_to_draw = (i < (jumpMax - jumpCount)) ? sJumpOn : sJumpOff;
