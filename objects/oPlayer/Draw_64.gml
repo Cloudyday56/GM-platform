@@ -22,18 +22,6 @@ if !(room == rWin)
 }
 
 
-if room != r6
-{
-	draw_set_alpha(0.8);
-	var startX = 32;       // Bottom-left x position
-	var startY = display_get_gui_height() - 92; // Start from bottom
-
-	for (var i = 0; i < jumpMax; i++) {
-	    var sprite_to_draw = (i < jumpMax - jumpCount) ? sJumpOn : sJumpOff;
-	    draw_sprite(sprite_to_draw, 0, startX, startY - i * 72);
-	}
-	draw_set_alpha(1);
-}
 
 
 
