@@ -1,6 +1,21 @@
 //this draws the player depending on the x direction the player is facing
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale*face, 
 				image_yscale, image_angle, image_blend, image_alpha);
+				
+if room != r6
+{
+	draw_set_alpha(0.7);
+	var offsetX = 10;       // Bottom-left x position
+	var offsetY = 10;		// Start from bottom
+
+	for (var i = 0; i < jumpMax; i++) {
+	    var sprite_to_draw = (i < (jumpMax - jumpCount)) ? sJumpOn : sJumpOff;
+	    draw_sprite(sprite_to_draw, 0, x + offsetX, y - offsetY - i*10);
+	}
+	draw_set_alpha(1);
+}
+				
+
 if dead 
 {
 	//draw a semi-transparent black background to dim the game screen
