@@ -12,6 +12,7 @@ function setOnGround(val = true)
 		{
 			coyoteHangTimer = coyoteHangFrame; //(HANG) reset hang time
 		}
+		
 	}else
 	{
 		onGround = false;
@@ -55,15 +56,28 @@ controlsSetup(); //import the code from the script
 
 
 //different sprites for oPlayer
-spr_idle = sPlayer_idle;
-spr_walk = sPlayer_walk;
-spr_run = sPlayer_run;
-spr_jump = sPlayer_jump;
 
-//state
+if room != ra10 
+{
+	spr_jump = sPlayer_jump;
+	spr_idle = sPlayer_idle;
+	spr_walk = sPlayer_walk;
+	spr_run = sPlayer_run;
+	spr_stick = sPlayer_stick;
+	spr_crouch = sPlayer_crouching;
+}else
+{
+	spr_jump = sPlayer_jumpCool;
+	spr_idle = sPlayer_idle;
+	spr_walk = sPlayer_walk;
+	spr_run = sPlayer_run;
+	spr_stick = sPlayer_stick;
+	spr_crouch = sPlayer_crouching;
+}
+
 crouching = false;
-spr_crouch = sPlayer_crouching;
-crouchSpd = 1;
+
+
 
 //Moving
 
@@ -71,23 +85,54 @@ crouchSpd = 1;
 	moveDir = 0; //going left or right
 
 	moveType = 0; //running or walking
-	moveSpd[0] = 2; //walking speed
-	moveSpd[1] = 3.5; //running speed
+	
+	if room == ra10 //speed room
+	{
+		moveSpd[0] = 3; 
+		moveSpd[1] = 5; 
+		jumpSpd = -3;
+		grav = 0.15;
+		crouchSpd = 1;
+	}
+	else if room == r7
+	{
+		moveSpd[0] = 3.5; 
+		moveSpd[1] = 5.5; 
+		jumpSpd = -3.5;
+		grav = .20;
+		crouchSpd = 1.5;
+	}
+	else
+	{
+		moveSpd[0] = 2; //walking speed
+		moveSpd[1] = 3.5; //running speed
+		crouchSpd = 1; //crouch speed
+		jumpSpd = -3; //jump speed (modify yspeed)
+		grav = .25; //gravity
+	}
 	//used as moveSpd[moveType]
 
 	xspeed = 0;
 	yspeed = 0;
 
 
-	//Jumping
-	grav = .25; //gravity
+	
 	//termVel = 4; //speed upper bound, not necessary
 
-	jumpSpd = -3; //jump speed (modify yspeed)
-
-	jumpMax = 2; //double jump
+	
+	
+	if room == r6//fly room
+	{
+		jumpMax = 1000;
+		maxSoundJumpCount = 1000;
+	}else
+	{
+		jumpMax = 2; //double jump
+		maxSoundJumpCount = 2;
+	}
 	jumpCount = 0; //jump count
-	soundJumpCount = 0
+	
+	soundJumpCount = 0;
 
 	jumpHoldTime = 0; 
 	jumpHoldFrame = 15;
@@ -122,11 +167,14 @@ maxDroppingSpeed = 8; //to stick to platform
 
 
 //collectables
-global.keyCount = 0;
+if (!ds_map_exists(global.collectedKeys, room)) {
+    ds_map_add(global.collectedKeys, room, 0);
+}
+
 
 //death condition
 dead = false;
-
+counted_death = false;
 
 switch (room)
 {
@@ -142,6 +190,8 @@ switch (room)
     case ra10: global.currentLevel = 10; break;
 
 }
+
+
 
 
 

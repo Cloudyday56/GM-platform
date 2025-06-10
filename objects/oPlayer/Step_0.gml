@@ -133,10 +133,11 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 		}
 		*/
 		
-		if crouching
-		{
-			mask_index = spr_crouch;
-		}
+		//if crouching
+		//{
+		//	sprite_index = spr_crouch;
+		//	mask_index = spr_crouch;
+		//}
 		
 	
 	//out of crouch
@@ -170,7 +171,13 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 #region
 //X Movement
 	//Direction
-	moveDir = rightKey - leftKey;
+	if room == r8
+	{
+		moveDir = leftKey - rightKey;
+	}else
+	{
+		moveDir = rightKey - leftKey;
+	}
 	
 	//Get face (facing which side)
 	if moveDir != 0
@@ -291,7 +298,34 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 	}
 	else
 	{
-		yspeed += grav; //Apply gravity after coyote time
+		if room == ra10
+		{
+			var max_speed = 2;
+
+			// Clamp yspeed based on the direction of gravity
+			if grav < 0
+			{
+				if yspeed < -max_speed {
+					yspeed = -max_speed;
+				}
+				else {
+					yspeed += grav;
+				}
+			}
+			else
+			{
+				if yspeed > max_speed {
+					yspeed = max_speed;
+				}
+				else {
+					yspeed += grav;
+				}
+			}
+		}
+		else
+		{
+			yspeed += grav; //Apply gravity after coyote time
+		}
 		setOnGround(false); //in the air
 	}
 
@@ -300,17 +334,13 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 	if onGround
 	{ 
 		jumpCount = 0 //reset jump count
+		soundJumpCount = 0; 
 		coyoteJumpTimer = coyoteJumpFrame; //(JUMP) reset coyote jump time
 		
 	} 
 	//check "onWall"
-	if (yspeed >= 0 && place_meeting(x, y+yspeed, oWall)) || (xspeed >= 0 && place_meeting(x+xspeed, y, oWall))
-	{
-		setOnGround(true);
-
-	}
-	
-	else{//if falls
+	if !(yspeed >= 0 && place_meeting(x, y+yspeed, oWall)) || !(abs(xspeed) >= 0 && place_meeting(x+xspeed, y, oWall))
+	{//if falls
 		coyoteJumpTimer --; 
 		if jumpCount == 0 && coyoteJumpTimer <=0 //(JUMP) if in the air, did not jump, 
 												 //and passed the coyote time, 
@@ -338,8 +368,13 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 	
 		jumpCount ++; //increase jump count
 	
-	    jumpHoldTime = jumpHoldFrame; //can be held (look at next ifs)
-		
+		if room == ra10
+		{
+			jumpHoldTime = jumpHoldFrame + 2;
+		}else
+		{
+			jumpHoldTime = jumpHoldFrame; //can be held (look at next ifs)
+		}
 		setOnGround(false); //no longer on ground
 	
 	}
@@ -396,7 +431,7 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 			jumpHoldTime = 0;
 		}
 
-	//    //Set xspd to zero to "collide"
+	//    //Set yspd to zero to "collide"
 	    yspeed = 0;
 		
 	//	//walljump !!
@@ -661,23 +696,6 @@ if place_meeting(x, y, oGround)
 
 #endregion
 
-//--------------------------------
-#region
-//WALL
-	
-	
-	
-	//if (yspeed >= 0 && place_meeting(x + xspeed, y, oWall))
-	//{
-	//	setOnGround(false);
-
-	//}
-	
-	
-
-
-#endregion
-//--------------------------------
 
 #region
 //sprite control
@@ -695,16 +713,27 @@ if place_meeting(x, y, oGround)
 	{
 		sprite_index = spr_idle;
 	}
-	if !onGround 
+
+	if !onGround
 	{
-		sprite_index = spr_jump;
+		if (place_meeting(x+1, y, oWall)) || (place_meeting(x-1, y, oWall))
+		{
+			sprite_index =  spr_stick;
+		}
+		else
+		{
+			sprite_index = spr_jump;	
+		}
 	}
-	if crouching
+	if !crouching
 	{
-		sprite_index = spr_crouch;
-	}
 		//set collision mask
 		mask_index = spr_idle;
+	}else
+	{
+		sprite_index = spr_crouch;
+		mask_index = spr_crouch;
+	}
 
 //reset game
 if resetKey
@@ -717,12 +746,17 @@ if place_meeting(x+xspeed, y, oSpike)
 || place_meeting(x, y+yspeed, oSpike)
 {
 	dead = true;
-	audio_play_sound(boom9, 0, false, 1, 0, 2.5);
+	if !counted_death
+	{
+		global.deathCount ++;
+		SaveProgress();
+	}
+	audio_play_sound(death_sound, 0, false, 1, 0, 1.5);
 }
 
 //Next level
 
-if place_meeting(x, y+yspeed, oDoor) && global.keyCount == 3
+if place_meeting(x, y+yspeed, oDoor) && global.keyCount >= 3
 {
 	if (global.unlockedLevel < global.currentLevel + 1) 
 	{
@@ -730,20 +764,20 @@ if place_meeting(x, y+yspeed, oDoor) && global.keyCount == 3
 		SaveProgress();
 	}
 	
+    ds_map_replace(global.collectedKeys, room, 0); // reset for re-entry
+    global.keyCount = 0;
 	room_goto_next();
 		
 }
 
 #endregion
 
-if (jumpkeyPressed && !dead && (soundJumpCount < 2)) {
-	audio_play_sound(jump_sound, 0, false, 1, 0.20);
+if (jumpkeyPressed && !dead && (soundJumpCount < maxSoundJumpCount)) {
+	audio_play_sound(jump_sound2, 0, false, 1, 0.20);
 	soundJumpCount++;
 }
 
-if (onGround) {
-	soundJumpCount = 0;
-}
+
 
 
 

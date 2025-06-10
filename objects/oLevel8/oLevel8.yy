@@ -6,10 +6,12 @@
   ],
   "managed":true,
   "name":"oLevel8",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelParent","path":"objects/oLevelParent/oLevelParent.yy",},"propertyId":{"name":"levelTitle","path":"objects/oLevelParent/oLevelParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Reversed",},
+  ],
   "parent":{
-    "name":"LevelButtons",
-    "path":"folders/Objects/LevelButtons.yy",
+    "name":"8Reversed",
+    "path":"folders/Objects/LevelButtons/8Reversed.yy",
   },
   "parentObjectId":{
     "name":"oLevelParent",

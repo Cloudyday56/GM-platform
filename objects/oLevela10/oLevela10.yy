@@ -6,10 +6,12 @@
   ],
   "managed":true,
   "name":"oLevela10",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelParent","path":"objects/oLevelParent/oLevelParent.yy",},"propertyId":{"name":"levelTitle","path":"objects/oLevelParent/oLevelParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Gravity",},
+  ],
   "parent":{
-    "name":"LevelButtons",
-    "path":"folders/Objects/LevelButtons.yy",
+    "name":"a10Gravity",
+    "path":"folders/Objects/LevelButtons/a10Gravity.yy",
   },
   "parentObjectId":{
     "name":"oLevelParent",

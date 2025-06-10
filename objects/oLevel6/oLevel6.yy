@@ -6,10 +6,12 @@
   ],
   "managed":true,
   "name":"oLevel6",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelParent","path":"objects/oLevelParent/oLevelParent.yy",},"propertyId":{"name":"levelTitle","path":"objects/oLevelParent/oLevelParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Fly",},
+  ],
   "parent":{
-    "name":"LevelButtons",
-    "path":"folders/Objects/LevelButtons.yy",
+    "name":"6Fly",
+    "path":"folders/Objects/LevelButtons/6Fly.yy",
   },
   "parentObjectId":{
     "name":"oLevelParent",

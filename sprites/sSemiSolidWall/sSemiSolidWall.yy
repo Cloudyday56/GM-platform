@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"sSemiSolidWall",
   "bboxMode":0,
-  "bbox_bottom":15,
+  "bbox_bottom":25,
   "bbox_left":0,
   "bbox_right":15,
   "bbox_top":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"31daac77-36c6-464f-aa5f-957408a4629a","name":"31daac77-36c6-464f-aa5f-957408a4629a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"08548335-7752-4fc7-83c2-3d3d288f1f9c","name":"08548335-7752-4fc7-83c2-3d3d288f1f9c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":16,
+  "height":32,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"ac7dedf2-c794-4e99-8412-2375266ed1cb","blendMode":0,"displayName":"default","isLocked":false,"name":"ac7dedf2-c794-4e99-8412-2375266ed1cb","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"6d047b20-29e3-478e-8c85-d5aa81a3dd42","blendMode":0,"displayName":"default","isLocked":false,"name":"6d047b20-29e3-478e-8c85-d5aa81a3dd42","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sSemiSolidWall",
   "nineSlice":null,
@@ -63,7 +63,7 @@
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
-    "seqHeight":16.0,
+    "seqHeight":32.0,
     "seqWidth":16.0,
     "showBackdrop":true,
     "showBackdropImage":false,
@@ -71,8 +71,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"31daac77-36c6-464f-aa5f-957408a4629a","path":"sprites/sSemiSolidWall/sSemiSolidWall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8c1758e6-4500-4b19-9bd7-809b844227a3","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"08548335-7752-4fc7-83c2-3d3d288f1f9c","path":"sprites/sSemiSolidWall/sSemiSolidWall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"1786d54b-082d-4f9e-b3b0-6d041c7cf2da","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
