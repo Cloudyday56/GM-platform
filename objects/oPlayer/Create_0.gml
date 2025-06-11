@@ -68,11 +68,11 @@ if room != ra10
 }else
 {
 	spr_jump = sPlayer_jumpCool;
-	spr_idle = sPlayer_idle;
-	spr_walk = sPlayer_walk;
-	spr_run = sPlayer_run;
-	spr_stick = sPlayer_stick;
-	spr_crouch = sPlayer_crouching;
+	spr_idle = sPlayer_idleCool;
+	spr_walk = sPlayer_walkCool;
+	spr_run = sPlayer_runCool;
+	spr_stick = sPlayer_stickCool;
+	spr_crouch = sPlayer_crouchingCool;
 }
 
 crouching = false;
