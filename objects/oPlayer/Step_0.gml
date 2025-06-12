@@ -349,6 +349,11 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspeed != 0
 			jumpCount = 1
 		};
 		//coyoteHangTimer = 0; //(HANG) no more coyote hang time, i'm not sure if we need this line
+	}else
+	{
+
+		soundJumpCount = 0;
+		jumpCount = 0
 	};
 
 	//jump (jump buffer details in GenFns
