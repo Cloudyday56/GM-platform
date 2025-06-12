@@ -4,6 +4,8 @@ draw_sprite_ext(sprite_index, image_index, x, y, image_xscale*face,
 				
 if room != r6
 {
+	if room != r7
+	{
 	draw_set_alpha(0.7);
 	var offsetX = 10;       // Bottom-left x position
 	var offsetY = 10;		// Start from bottom
@@ -13,6 +15,20 @@ if room != r6
 	    draw_sprite(sprite_to_draw, 0, x + offsetX, y - offsetY - i*10);
 	}
 	draw_set_alpha(1);
+	}
+	else 
+	{
+	draw_set_alpha(0.7);
+	var offsetX = 75;       // Bottom-left x position
+	var offsetY = 75;		// Start from bottom
+
+	for (var i = 0; i < jumpMax; i++) {
+	    var sprite_to_draw = (i < (jumpMax - jumpCount)) ? sJumpOn : sJumpOff;
+	    draw_sprite(sprite_to_draw, 0, x + offsetX, y - offsetY - i*10);
+	}
+	draw_set_alpha(1);	
+	}
+	
 }
 				
 
