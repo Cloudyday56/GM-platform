@@ -137,6 +137,7 @@
     {"name":"inst_5C6E4813","path":"rooms/rWin/rWin.yy",},
     {"name":"inst_4D52F71F","path":"rooms/rWin/rWin.yy",},
     {"name":"inst_3362D4B4","path":"rooms/rWin/rWin.yy",},
+    {"name":"inst_43AC58FF","path":"rooms/rWin/rWin.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -272,6 +273,7 @@
         {"$GMRInstance":"v2","%Name":"inst_5C6E4813","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5C6E4813","objectId":{"name":"oGroundMove2","path":"objects/oGroundMove2/oGroundMove2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":192.0,},
         {"$GMRInstance":"v2","%Name":"inst_4D52F71F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4D52F71F","objectId":{"name":"oGroundMove2","path":"objects/oGroundMove2/oGroundMove2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":496.0,"y":192.0,},
         {"$GMRInstance":"v2","%Name":"inst_3362D4B4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3362D4B4","objectId":{"name":"oGroundMove","path":"objects/oGroundMove/oGroundMove.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":544.0,"y":96.0,},
+        {"$GMRInstance":"v2","%Name":"inst_43AC58FF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_43AC58FF","objectId":{"name":"oTransparent","path":"objects/oTransparent/oTransparent.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.4599998,"scaleY":1.3181819,"x":447.0,"y":243.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Castle","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_16BCDD51_1_1_1_1_1_1_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_16BCDD51_1_1_1_1_1_1_1_1_1","objectId":{"name":"oBack","path":"objects/oBack/oBack.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":480.0,"y":32.0,},
