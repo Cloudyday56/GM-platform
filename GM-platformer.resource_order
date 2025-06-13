@@ -94,6 +94,7 @@
     {"name":"LoadProgress","order":2,"path":"scripts/LoadProgress/LoadProgress.yy",},
     {"name":"SaveProgress","order":1,"path":"scripts/SaveProgress/SaveProgress.yy",},
     {"name":"death_sound","order":6,"path":"sounds/death_sound/death_sound.yy",},
+    {"name":"game_music","order":9,"path":"sounds/game_music/game_music.yy",},
     {"name":"jump_sound","order":1,"path":"sounds/jump_sound/jump_sound.yy",},
     {"name":"jump_sound2","order":8,"path":"sounds/jump_sound2/jump_sound2.yy",},
     {"name":"key_pickup_sound","order":2,"path":"sounds/key_pickup_sound/key_pickup_sound.yy",},
