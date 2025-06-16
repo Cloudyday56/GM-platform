@@ -15,3 +15,11 @@ Goal: Complete all levels to reach the end with a minimal number of deaths
 Download or clone the repository
 Open the project in GameMaker Studio 2
 Run the game using the built-in play button
+
+📄 License
+
+- Code is licensed under the [MIT License](./LICENSE).  
+- Art and assets are licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/) license.
+
+You may freely use and modify the code for any purpose.  
+Art and assets may be used and shared only for **non-commercial purposes** with proper attribution.
